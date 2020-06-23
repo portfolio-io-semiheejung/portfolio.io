@@ -4,160 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio.io</title>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-   
+    <!-- CSS only
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- Third party plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
     <style>
-    {% block css %}
-    {% endblock  %}
-    .masthead{
-    /* height:100%; */
-    display: flex;
-    /* flex-wrap: wrap;  */
-    }
-    /* div.main-text
-    div.main-image */
-    div.main-image {
-        width: 90%;
-        background: url("../assets/img/main_bg.png"); 
-        position:absolute;
-        z-index:-1;
-    }
-    .main-text {
-        width: 450px;
-        padding-top: 30px;
-        margin-left: 0px;
-        margin-right: 700px;
-       
-        font-family: noto sans kr;
-        width: 25%;
-    }
-    .main-text .main-text-1 .typewrite {
-        font-size: 20px;
-        font-weight: 300;
-        /*padding: 10px;*/
-        margin: 0;
-        color: #5d5d5d;
-    }
-    .main-text .main-text-1 p {
-        overflow: hidden;
-        color: #5e5e5e;
-    }
-    .main-text .main-text-2 {
-        font-size: 60px;
-        font-weight: 300;
-        letter-spacing: -3px;
-    } 
-     /* .main-text .main-text-2 b {
-        font-weight: 500;
-    } */
-     /* .main-text .main-text-2 p {
-        overflow: hidden;
-        margin-bottom: -10px;
-    } */
-     .main-button {
-        /* padding: 50px 0; */
-        padding-top : 50px;
-    }
-     .main-button a {
-        display: table;
-    }
-     .main-button div {
-        display: inline-block;
-        padding: 15px 20px;
-        background-color: #fff;
-        font-weight: 300;
-        width: 210px;
-        text-align: center;
-        margin: 5px;
-        font-size: 16px;
-        color: #000;
-        cursor:pointer;
-    }
-     .main-button div.main-button-make {
-        background-color: #00B8F0;
-        color: #fff;
-    }
-    .carousel-control-prev-icon { 
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); 
-    } 
-    .carousel-control-next-icon { 
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); 
-    }
-    .main-browser-text-area {
-    font-size: 0;
-    width: 700px;
-    padding-bottom: 50px;
-    text-align: center;
-    }
-    .main-browser-text-area > div {
-        /*display: inline-block;*/
-    }
-    .main-browser-text-1 {
-        /*width: 55%;*/
-        font-size: 40px;
-        font-weight: 300;
-    }
-    .main-browser-text-1 > p {
-        margin-bottom: -10px;
-    }
-    .main-browser-text-2 {
-        /*width: 45%;*/
-        font-size: 18px;
-        font-weight: 300;
-        /*padding-left: 35px;*/
-        color: #4d4d4d;
-        margin-top: 50px;
-    }
-    .main-browser-text-2 > p {
-        margin-bottom: 2px;
-    }
-
-    .bts_login {
-        padding: 20px 0;
-    }
-    .bts_login a {
-        display: table;
-    }
-    .bts_login div {
-        display: inline-block;
-        padding: 10px 10px;
-        background-color: #fff;
-        font-weight: 300;
-        width: 110px;
-        text-align: center;
-        /* margin: 5px; */
-        font-size: 12px;
-        color: #000;
-        cursor:pointer;
-    }
-    .bts_login div.main-button-make {
-        background-color: #00B8F0;
-        color: #fff;
-    }
-
-    /* .main-button2 {
-        padding: 50px 0;
-    } */
-     .main-button2 a {
-        display: table;
-    }
-     .main-button2 div {
-        display: inline-block;
-        padding: 15px 20px;
-        background-color: #fff;
-        font-weight: 300;
-        width: 210px;
-        text-align: center;
-        margin: 5px;
-        font-size: 15px;
-        color: #000;
-        cursor:pointer;
-    }
-     .main-button2 div.main-button-make {
-        background-color: #4fb7d6;
-        color: #fff;
-    }
+        
 
     </style>  
 
@@ -167,7 +29,8 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <img src="img/logo.png" alt="Logo" style="width: 15%;"></a>
+                <img src="img/logo.png" alt="Logo" style="width: 15%;">
+            </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -182,9 +45,8 @@
             </div>
         </div>
     </nav>
-
     {% block body %}
-    {% endblock  %}
+    {% endblock body %}
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
