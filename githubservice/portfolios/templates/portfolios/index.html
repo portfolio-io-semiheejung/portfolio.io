@@ -1,0 +1,27 @@
+{% extends 'portfolio.html' %}
+
+{% block  body%}
+
+    <!--name 출력 부분-->
+    {% if name|length < 1 %}
+        <p>name이 없어요</p>
+    {% else %}
+        <p>{{ name }}</p>
+    {% endif %}
+
+    <!--img 출력 부분-->
+    {% if profile_img_url|length < 1 %}
+        <p>img_url이 없어요</p>
+    {% else %}
+        <img src="{{ profile_img_url }}">
+    {% endif %}
+
+    <!--email 출력 부분-->
+    {% if email|length < 1 %}
+        <p>email이 없어요</p>
+    {% else %}
+        <p>{{email}}</p>
+    {% endif %}
+
+    <h2>{{ repo_name }}</h2>
+{% endblock  %}
