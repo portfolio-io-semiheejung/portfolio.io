@@ -1,7 +1,173 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block style %}
+.masthead{
+    /* height:100%; */
+    display: flex;
+    /* flex-wrap: wrap;  */
+}
+div.main-image {
+    width: 90%;
+    {% comment %} background: white url("images/main_bg_edit1.png") no-repeat; {% endcomment %}
+    position:absolute;
+    z-index:-1;
+}
+.main-text {
+    width: 450px;
+    padding-top: 30px;
+    margin-left: 0px;
+    margin-right: 700px;
+    font-family: noto sans kr;
+    width: 25%;
+}
+.main-text .main-text-1 .typewrite {
+    font-size: 20px;
+    font-weight: 300;
+    /*padding: 10px;*/
+    margin: 0;
+    color: #5d5d5d;
+}
+.main-text .main-text-1 p {
+    overflow: hidden;
+    color: #5e5e5e;
+}
+.main-text .main-text-2 {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -3px;
+} 
+    /* .main-text .main-text-2 b {
+    font-weight: 500;
+} */
+    /* .main-text .main-text-2 p {
+    overflow: hidden;
+    margin-bottom: -10px;
+} */
+    .main-button {
+    /* padding: 50px 0; */
+    padding-top : 50px;
+}
+    .main-button a {
+    display: table;
+}
+    .main-button div {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #fff;
+    font-weight: 300;
+    width: 210px;
+    text-align: center;
+    margin: 5px;
+    font-size: 16px;
+    color: #000;
+    cursor:pointer;
+}
+    .main-button div.main-button-make {
+    background-color: #00B8F0;
+    color: #fff;
+}
+.carousel-control-prev-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); 
+} 
+.carousel-control-next-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); 
+}
+.main-browser-text-area {
+font-size: 0;
+width: 700px;
+padding-bottom: 50px;
+text-align: center;
+}
+.main-browser-text-area > div {
+    /*display: inline-block;*/
+}
+.main-browser-text-1 {
+    /*width: 55%;*/
+    font-size: 40px;
+    font-weight: 300;
+}
+.main-browser-text-1 > p {
+    margin-bottom: -10px;
+}
+.main-browser-text-2 {
+    /*width: 45%;*/
+    font-size: 18px;
+    font-weight: 300;
+    /*padding-left: 35px;*/
+    color: #4d4d4d;
+    margin-top: 50px;
+}
+.main-browser-text-2 > p {
+    margin-bottom: 2px;
+}
 
+.bts_login {
+    padding: 20px 0;
+}
+.bts_login a {
+    display: table;
+}
+.bts_login div {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #fff;
+    font-weight: 300;
+    width: 110px;
+    text-align: center;
+    /* margin: 5px; */
+    font-size: 12px;
+    color: #000;
+    cursor:pointer;
+}
+.bts_login div.main-button-make {
+    background-color: #00B8F0;
+    color: #fff;
+}
+
+/* .main-button2 {
+    padding: 50px 0;
+} */
+    .main-button2 a {
+    display: table;
+}
+    .main-button2 div {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #fff;
+    font-weight: 300;
+    width: 210px;
+    text-align: center;
+    margin: 5px;
+    font-size: 15px;
+    color: #000;
+    cursor:pointer;
+}
+    .main-button2 div.main-button-make {
+    background-color: #4fb7d6;
+    color: #fff;
+}
+{% endblock style %}
 {% block body %}
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <img src="{% static "mains/images/logo.png" %}" alt="Logo" style="width: 15%;">
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+            </ul>
+            <div class="bts_login" style="margin:20px">
+                <ani class="button-1"><a href="/template.html"><div class="main-button-make">회원가입/로그인</div></a></ani>
+            </div>
+        </div>
+    </div>
+</nav>
 <!-- Masthead-->
 <header class="masthead">
     <div class="container h-100" >
@@ -18,7 +184,6 @@
                     <p style="overflow: hidden;margin-bottom: -10px;"><ani class="txt-2"><b style="font-weight: 500;"></b>간편</b>하게</ani></p>
                     <p style="overflow: hidden;margin-bottom: -10px;"><ani class="txt-3">만드는</ani><ani class="txt-4"><b style="font-weight: 500;">포트폴리오</b></ani></p>
                 </div>
-
                 <div class="main-button">
                     <ani class="button-1"><a href="/template.html"><div class="main-button-make"> 포트폴리오 만들기 +</div></a></ani>
                 </div>
@@ -26,14 +191,8 @@
                     <ani class="button-2"><a href="/template.html"><div class="main-button-make"> 사용 설명서 보기 +</div></a></ani>
                 </div>
             </div>
-                                
-            
             <div class ="main-image">
-                <img src="assets/img/main_bg_edit1.png"alt="">
-                <!-- <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-white font-weight-bold">Portfolio.io</h1>
-                <hr class="divider my-4" />
-                </div> -->
+                <img src="{% static "mains/images/main_bg_edit1.png" %}" alt="main_background">
             </div>
         </div>
     </div>
@@ -62,26 +221,23 @@
 <!-- Call to action-->
 <section class="page-section bg-dark text-white" style="height: 700px" id="services">
     <div class="container text-center">
-        
         <div id="demo" class="carousel slide" data-ride="carousel">
-
             <!-- Indicators -->
             <ul class="carousel-indicators">
                 <li data-target="#demo" data-slide-to="0" class="active"></li>
                 <li data-target="#demo" data-slide-to="1"></li>
                 <li data-target="#demo" data-slide-to="2"></li>
             </ul>
-            
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="assets/img/apple.jpg" style="width:700px" alt="Los Angeles">
+                <img src="{% static "mains/images/apple.jpg" %}" style="width:700px" alt="Los Angeles">
                 </div>
                 <div class="carousel-item">
-                <img src="assets/img/apple.jpg" style="width:700px" alt="Chicago">
+                <img src="{% static "mains/images/apple.jpg" %}" style="width:700px" alt="Chicago">
                 </div>
                 <div class="carousel-item">
-                <img src="assets/img/apple.jpg" style="width:700px" alt="New York">
+                <img src="{% static "mains/images/apple.jpg" %}" style="width:700px" alt="New York">
                 </div>
             </div>
             
@@ -102,7 +258,5 @@
         <div class="small text-center text-muted">Copyright © 2020 - Portfolio.io</div>
         <div class="small text-center text-muted">저희의 github에 star<img src="https://toppng.com/uploads/preview/download-star-document-yellow-clipart-transparent-background-star-11562964878rcvhjmdsqc.png" style="width:20px"> 눌러주시면 언제든 사용가능합니다</div>
     </div>
-    
-
 </footer>
 {% endblock  %}
