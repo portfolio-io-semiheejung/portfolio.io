@@ -9,8 +9,6 @@ repo_url = 'https://api.github.com/users/heejung-choi/repos'
 d = json.loads(requests.get(repo_url).text)    
 
 # pprint(d[0])
-pprint()
-
 pprint(d[0]['name'])
 pprint(d[0]['html_url'])
 
@@ -27,9 +25,9 @@ def index(request):
     repo_url = 'https://api.github.com/users/heejung-choi/repos'
     repo_response = requests.get(repo_url).json()    
     
-    d = json.loads(requests.get(repo_url).text)
+    #d = json.loads(requests.get(repo_url).text)
     print('------')
-    pprint(d)
+    #pprint(d)
     print('------')
 
    # print(repo_response[0].values('name'))
@@ -37,7 +35,7 @@ def index(request):
         'name': response['login'],
         'profile_img_url': response['avatar_url'],
         'email': response['email'],
-         'repo_name' : repo_response['name']
+        #'repo_name' : repo_response['name']
     })
 
     
