@@ -5,15 +5,6 @@ from datetime import datetime
 from django.http import JsonResponse 
 import json
 
-repo_url = 'https://api.github.com/users/heejung-choi/repos'
-d = json.loads(requests.get(repo_url).text)    
-
-# pprint(d[0])
-pprint()
-
-pprint(d[0]['name'])
-pprint(d[0]['html_url'])
-
 #for a in d[0]['ssh_url']:
 #    pprint(a)
 
@@ -24,20 +15,36 @@ def index(request):
     response = requests.get(url).json()
 
     #repo_url = 'https://api.github.com/repos/heejung-choi/django'
-    repo_url = 'https://api.github.com/users/heejung-choi/repos'
-    repo_response = requests.get(repo_url).json()    
     
-    d = json.loads(requests.get(repo_url).text)
-    print('------')
-    pprint(d)
-    print('------')
+    repo_url = 'https://api.github.com/users/heejung-choi/repos'
+    repo_load = json.loads(requests.get(repo_url).text)    
+
+    #pprint(d[0])
+    #pprint(d[0]['name'])
+    #pprint(d[0]['html_url'])
+    #pprint(len(d))
+
+    repo_name = []
+    repo_url = []
+    for r in range(len(repo_load)):
+        pprint(repo_load[r]['name'])
+        pprint(repo_load[r]['html_url'])
+        repo_name.append(repo_load[r]['name'])
+        repo_url.append(repo_load[r]['html_url'])        
+    
+    pprint("---------------------") 
+    pprint(repo_name)
+
+    context = {
+        'repo_name': repo_name,
+        'repo_url': repo_url
+    }
 
    # print(repo_response[0].values('name'))
     return render(request,'portfolios/index.html',{
         'name': response['login'],
         'profile_img_url': response['avatar_url'],
-        'email': response['email'],
-         'repo_name' : repo_response['name']
-    })
+        'email': response['email'],    
+    }, context)
 
     
