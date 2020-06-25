@@ -32,19 +32,16 @@ def index(request):
         repo_name.append(repo_load[r]['name'])
         repo_url.append(repo_load[r]['html_url'])        
     
-    pprint("---------------------") 
-    pprint(repo_name)
-
-    context = {
-        'repo_name': repo_name,
-        'repo_url': repo_url
-    }
+    pprint("---------------------")
+    pprint(repo_name)  
 
    # print(repo_response[0].values('name'))
     return render(request,'portfolios/index.html',{
         'name': response['login'],
         'profile_img_url': response['avatar_url'],
-        'email': response['email'],    
-    }, context)
+        'email': response['email'],
+        'repo_name': repo_name,
+        'repo_url': repo_url,  
+    },)
 
     
