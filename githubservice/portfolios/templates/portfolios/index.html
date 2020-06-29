@@ -1,33 +1,69 @@
 {% extends 'portfolio.html' %}
+{% load static %}
 
-{% block  body%}
-
-    <!--name 출력 부분-->
-    {% if name|length < 1 %}
-        <p>name이 없어요</p>
-    {% else %}
-        <p>{{ name }}</p>
-    {% endif %}
-
-    <!--img 출력 부분-->
-    {% if profile_img_url|length < 1 %}
-        <p>img_url이 없어요</p>
-    {% else %}
-        <img src="{{ profile_img_url }}">
-    {% endif %}
-
-    <!--email 출력 부분-->
-    {% if email|length < 1 %}
-        <p>email이 없어요</p>
-    {% else %} 
-        <p>{{email}}</p>
-    {% endif %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/portfolio_index.css' %}">
+    <style>
     
-    {% for a in repo_url %}
-    <p>{{a}} </p> 
-    {% endfor %}
-    {{repo_name}}
-    {{repo_url}}
-  
-{% endblock %} 
+    </style>
+{% endblock  %}
+{% block body %}   
+    <div class="headbutton">
+    <div class="a">   
+    <button class="button button2">이전 페이지로</button>
+    </div>
+    <div class="b">   
+    <button class="button button2">포트폴리오 데이터 입력하기</button>
+    </div>
+    </div>
+{% block container%}    
+    <div class="row">
+    <div class="col-sm-1 colback"></div>
+    <div class ="portindex col-sm-10 text-center">                
+        <h5>portfolio.io는 고객의 github 홈페이지의 내용을 기반으로 포트폴리오를 작성합니다.<br>
+        고객의 github과 연동하여 정보를 받아오고, 추가적으로 사용자에게 정보를 입력받아 포트폴리오를 완성합니다.
+        고객은 github의 레포지토리 중 포트폴리오에 추가하고 싶은 것을 선택하여 포트폴리오를 만들 수 있습니다<br><br>
+        아래에는 고객님의 github에서 받아온 내용 입니다.<br>
+        확인하신 후 포트폴리오 데이터 입력하기 버튼을 눌러주세요<br>
+        </h5><br>
+        <div class="centmh">
+        <div class="border mh">         
+            <br>
+            <!--img 출력 부분-->                           
+            {% if profile_img_url|length < 1 %}
+                <p>img_url이 없어요</p>
+            {% else %}
+                <img class="profile_img rounded-circle" src="{{ profile_img_url }}">
+            {% endif %}
+            <br> <br>       
+            <!--name 출력 부분-->      
+            <h5>
+            {% if name|length < 1 %}
+                name이 없어요
+            {% else %}
+                {{ name }}
+            {% endif %}
+            </h5>               
+            <!--email 출력 부분-->                               
+            {% if email|length < 1 %}
+                <p>email이 없어요</p>
+            {% else %} 
+                <p>{{email}}</p>
+            {% endif %}
+            <br>            
+        </div>
+        </div>                 
+        <br>
+        <!--gitrepo출력부분-->
+        {% for name in repo_name %}
+        <button class="button button2"><p>{{name}}</p></button>            
+        {% endfor %}
+        {% comment %} {{repo_name}}
+        {{repo_url}} {% endcomment %}
+        </div>
+    <div class="col-sm-1 colback"></div>
+    </div>
+    {% endblock  %}  
+   
+{% endblock %}
 
