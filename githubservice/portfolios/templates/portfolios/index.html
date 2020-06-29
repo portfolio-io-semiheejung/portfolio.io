@@ -19,11 +19,15 @@
     <!--email 출력 부분-->
     {% if email|length < 1 %}
         <p>email이 없어요</p>
-    {% else %}
+    {% else %} 
         <p>{{email}}</p>
     {% endif %}
-    <p>{{ repo_name }}</p>
-    <p>{{ repo_url }}</p>
-        
-{% endblock %}
+    
+    {% for a in repo_url %}
+    <p>{{a}} </p> 
+    {% endfor %}
+    {{repo_name}}
+    {{repo_url}}
+  
+{% endblock %} 
 
