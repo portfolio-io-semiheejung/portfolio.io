@@ -24,7 +24,7 @@ def login(request):
         form = AuthenticationForm(request, request.POST)
         if form.is_valid():
            auth_login(request, form.get_user()) # 객체1에 대한 유저정보
-           return redirect('pages:index')
+           return redirect('mains:index')
     else:
         form = AuthenticationForm()
     context = {

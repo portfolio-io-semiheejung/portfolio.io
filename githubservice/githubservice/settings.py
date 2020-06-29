@@ -32,8 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'mains',
-    'portfolios',
     'accounts',
+    'portfolios',
     'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
