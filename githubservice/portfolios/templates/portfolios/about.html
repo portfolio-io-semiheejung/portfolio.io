@@ -1,0 +1,298 @@
+{% extends 'portfolio.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/portfolio_about.css' %}">
+<style>    
+  </style>
+{% endblock  %}
+    
+{% block body %}
+<!--20200630 header 부분 시작-->
+<div class="header sticky-top">      
+  <nav class="navbar navbar-expand-md bg-white navbar-white navsize">
+    <a class="text-dark" href="#"><span style="font-size: 1.5em; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+heejung /</span> 데이터분석, 백앤드</a>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto topnav">
+          <li class="nav-item">
+            <a class="text-dark" href="#about">ABOUT ME &nbsp;</a>&nbsp;&nbsp;&nbsp;
+          </li>
+           <li class="nav-item">
+            <a class="text-dark" href="#skill">SKILL &nbsp;</a>&nbsp;&nbsp;&nbsp;
+          </li>
+          <li class="nav-item">
+            <a class="text-dark" href="#project">PROJECT &nbsp;</a>&nbsp;&nbsp;&nbsp;
+          </li>
+          <li class="nav-item">
+            <a class="text-dark" href="#edu">EXPERIENCE & EDUCATION &nbsp;</a>&nbsp;&nbsp;&nbsp;
+          </li>         
+          <li class="nav-item">
+            <a class="text-dark" href="#contact">CONTACT &nbsp;&nbsp;&nbsp;</a>
+          </li>    
+        </ul>
+      </div>  
+    </nav>          
+</div>
+<!--20200630 header 부분 끝-->
+
+<!--20200630 about부분 시작-->
+<div class="main" id="about">
+<div class="mainleft" style="background-color: rgb(230, 218, 206);"></div>
+<div class="mainright"></div>
+</div>
+<div class="maincard">
+  <div class="cardleft">
+    <div class="border-0 shadow p-3 mb-5" style="background-color: rgb(244, 236, 230);">
+        <br>            
+        <img class="rounded-circle" src="{% static 'img/portfolio/희정.jpg' %}" width="152px" height="200px">
+        <br><br>       
+        <p class="boldword">heejung <br></p>
+        <hr width="50px" size="10" align="center" color="blue">
+        <br>
+        <p class="cardword">데이터분석, 백앤드 <br>
+          choi951008@naver.com
+        </p>                   
+        <img src="{% static 'img/portfolio/git.png' %}" onclick="location.href='https://github.com/heejung-choi'" width="90px" height="90px">
+        <br><a href="https://github.com/heejung-choi">github</a>          
+    </div>
+  </div>
+  <!--20200630 희정 myDevelope Life 시각화 부분 js 시작-->
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/plugins/timeline.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <!--20200630 희정 myDevelope Life 시각화 부분 js 끝-->
+
+  <!--20200630 희정 myDevelope Life 시각화 부분 시작-->
+  <script>
+  am4core.ready(function() {
+
+  // Themes begin
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+
+  var chart = am4core.create("chartdiv", am4plugins_timeline.CurveChart);
+  chart.curveContainer.padding(0, 100, 0, 120);
+  chart.maskBullets = false;
+
+  var colorSet = new am4core.ColorSet();
+
+  chart.data = [{
+      "category": "",
+      "year": "1",
+      "size": 3,
+      "text": "스마트시티(빅데이터)"
+    }, {
+      "category": "",
+      "year": "2",
+      "size": 3,
+      "text": "경영정보학부 졸업"
+    }, {
+      "category": "",
+      "year": "3",
+      "size": 3,
+      "text": "빅데이터 교육과정 수강"
+    }, {
+      "category": "",
+      "year": "4",
+      "size": 3,
+      "text": "골목상권(SpringMVC/Java)"
+    }, {
+      "category": "",
+      "year": "5",
+      "size": 3,
+      "text": "니카내카(기획)"
+    }, {
+      "category": "",
+      "year": "6",
+      "size": 3,
+      "text": "포트폴리오(Django/Python)"
+    }
+  ];
+
+  chart.dateFormatter.inputDateFormat = "yyyy";
+
+  chart.fontSize = 10;
+  chart.tooltipContainer.fontSize = 1;
+
+  var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "category";
+  categoryAxis.renderer.grid.template.disabled = true;
+
+  var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+  dateAxis.renderer.points = [{ x: -400, y: 0 }, { x: 0, y: 50 }, { x: 400, y: 0 }]
+  dateAxis.renderer.polyspline.tensionX = 0.8;
+  dateAxis.renderer.grid.template.disabled = true;
+  dateAxis.renderer.line.strokeDasharray = "1,4";
+  dateAxis.baseInterval = {period:"day", count:1}; // otherwise initial animation will be not smooth
+
+  dateAxis.renderer.labels.template.disabled = true;
+
+  var series = chart.series.push(new am4plugins_timeline.CurveLineSeries());
+  series.strokeOpacity = 0;
+  series.dataFields.dateX = "year";
+  series.dataFields.categoryY = "category";
+  series.dataFields.value = "size";
+  series.baseAxis = categoryAxis;
+
+  var interfaceColors = new am4core.InterfaceColorSet();
+
+  series.tooltip.pointerOrientation = "down";
+
+  var distance = 100;
+  var angle = 55;
+
+  var bullet = series.bullets.push(new am4charts.Bullet());
+
+  var line = bullet.createChild(am4core.Line);
+  line.adapter.add("stroke", function(fill, target) {
+    if (target.dataItem) {
+      return chart.colors.getIndex(target.dataItem.index)
+    }
+  });
+
+  line.x1 = 0;
+  line.y1 = 0;
+  line.y2 = 0;
+  line.x2 = distance - 10;
+  line.strokeDasharray = "1,3";
+
+  var circle = bullet.createChild(am4core.Circle);
+  circle.radius = 30;
+  circle.fillOpacity = 1;
+  circle.strokeOpacity = 0;
+
+  var circleHoverState = circle.states.create("hover");
+  circleHoverState.properties.scale = 1.3;
+
+  series.heatRules.push({ target: circle, min: 20, max: 50, property: "radius" });
+  circle.adapter.add("fill", function(fill, target) {
+    if (target.dataItem) {
+      return chart.colors.getIndex(target.dataItem.index)
+    }
+  });
+  circle.tooltipText = "{text}: {value}";
+  circle.adapter.add("tooltipY", function(tooltipY, target){
+    return -target.pixelRadius - 4;
+  });
+
+  var yearLabel = bullet.createChild(am4core.Label);
+  yearLabel.text = "{year}";
+  yearLabel.strokeOpacity = 0;
+  yearLabel.fill = am4core.color("#fff");
+  yearLabel.horizontalCenter = "middle";
+  yearLabel.verticalCenter = "middle";
+  yearLabel.interactionsEnabled = false;
+
+  var label = bullet.createChild(am4core.Label);
+  label.propertyFields.text = "text";
+  label.strokeOpacity = 0;
+  label.horizontalCenter = "right";
+  label.verticalCenter = "middle";
+
+  label.adapter.add("opacity", function(opacity, target) {
+    if(target.dataItem){
+      var index = target.dataItem.index;
+      var line = target.parent.children.getIndex(0);
+
+      if (index % 2 == 0) {
+        target.y = -distance * am4core.math.sin(-angle);
+        target.x = -distance * am4core.math.cos(-angle);
+        line.rotation = -angle - 180;
+        target.rotation = -angle;
+      }
+      else {
+        target.y = -distance * am4core.math.sin(angle);
+        target.x = -distance * am4core.math.cos(angle);
+        line.rotation = angle - 180;
+        target.rotation = angle;
+      }
+    }
+    return 1;
+  });
+
+  var outerCircle = bullet.createChild(am4core.Circle);
+  outerCircle.radius = 30;
+  outerCircle.fillOpacity = 0;
+  outerCircle.strokeOpacity = 0;
+  outerCircle.strokeDasharray = "1,3";
+
+  var hoverState = outerCircle.states.create("hover");
+  hoverState.properties.strokeOpacity = 0.8;
+  hoverState.properties.scale = 1.5;
+
+  outerCircle.events.on("over", function(event){
+    var circle = event.target.parent.children.getIndex(1);
+    circle.isHover = true;
+    event.target.stroke = circle.fill;
+    event.target.radius = circle.pixelRadius;
+    event.target.animate({property: "rotation", from: 0, to: 360}, 4000, am4core.ease.sinInOut);
+  });
+
+  outerCircle.events.on("out", function(event){
+    var circle = event.target.parent.children.getIndex(1);
+    circle.isHover = false;
+  });
+
+  chart.scrollbarX = new am4core.Scrollbar();
+  chart.scrollbarX.opacity = 0.5;
+  chart.scrollbarX.width = am4core.percent(50);
+  chart.scrollbarX.align = "center";
+
+  }); // end am4core.ready()
+  <!--20200630 희정 myDevelope Life 시각화 부분 끝-->
+
+  </script>
+  <div class="cardright">
+  <h5>My develope Life</h5>
+    <div id="chartdiv">
+    </div>
+    <br>
+    <h5>My major skills</h5>    
+  </div>    
+</div>
+<!--20200630 about부분 끝-->
+
+<!--20200630 edu부분 시작-->
+<div class="skill" id="skill" style="background-color: rgb(230, 218, 206);" >
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+</div>
+
+<div>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="..." class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!--20200630 edu부분 끝-->
+{% endblock  %}

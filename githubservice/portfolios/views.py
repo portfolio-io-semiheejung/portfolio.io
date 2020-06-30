@@ -38,4 +38,5 @@ def index(request):
         'repo_url': repo_url  
     },)
 
-    
+def about(request):
+    return render(request, 'portfolios/about.html')
