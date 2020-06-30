@@ -10,8 +10,9 @@
 <!--20200630 header 부분 시작-->
 <div class="header sticky-top">      
   <nav class="navbar navbar-expand-md bg-white navbar-white navsize">
-    <a class="text-dark" href="#"><span style="font-size: 1.5em; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
-heejung /</span> 데이터분석, 백앤드</a>
+    <a class="text-dark" href="#"><span style="font-size: 1.5em; font-weight: bold;">
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+      heejung /</span> 데이터분석, 백앤드</a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -259,25 +260,37 @@ heejung /</span> 데이터분석, 백앤드</a>
 
 <!--20200630 edu부분 시작-->
 <div class="skill" id="skill" style="background-color: rgb(230, 218, 206);" >
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
-<div class="card text-center">
-  <div class="card-header">
-    Featured
+  <div class="skiltop"></div>
+  <!--20200630 card부분 시작-->
+  <div class="text-center"><h1 class="font-weight-bold skillfont">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  Skill</h1></div>
+  <div class="skillcard shadow">
+    <div class="card text-center d-flex justify-content-center">
+      <div class="card-header cardhead" style="background-color: rgb(244, 236, 230);">
+      skill
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+    </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
-</div>
-
-</div>
-
+  <!--20200630 card 부분 끝-->
 <div>
-<div class="card mb-3" style="max-width: 540px;">
+
+
+
+<div class="text-center"><h1 class="font-weight-bold skillfont">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  Skill</h1></div>
+
+  <div class="text-center"><h1 class="font-weight-bold skillfont">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  Skill</h1></div>
+
+{% comment %} <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
       <img src="..." class="card-img" alt="...">
@@ -292,7 +305,7 @@ heejung /</span> 데이터분석, 백앤드</a>
   </div>
 </div>
 
-</div>
+</div> {% endcomment %}
 
 <!--20200630 edu부분 끝-->
 {% endblock  %}
