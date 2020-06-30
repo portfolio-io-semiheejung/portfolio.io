@@ -12,10 +12,10 @@ import json
 def index(request):
     # username = request.GET['username']
     # url = 'https://api.github.com/users/%s' % username
-    url = 'https://api.github.com/users/SeongjinOliver'
+    url = 'https://api.github.com/users/heejung-choi'
     response = requests.get(url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).json()
     print(response)
-    repo_url = 'https://api.github.com/users/SeongjinOliver/repos'       
+    repo_url = 'https://api.github.com/users/heejung-choi/repos'       
     repo_load = json.loads(requests.get(repo_url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).text)    
 
     repo_name = []
