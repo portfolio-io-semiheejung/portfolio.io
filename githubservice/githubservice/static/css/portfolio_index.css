@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@700&display=swap');
 body{
     background-color: #efefef;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .portindex{
