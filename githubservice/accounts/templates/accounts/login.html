@@ -2,10 +2,10 @@
 {% block content %}
 {% load bootstrap4 %}
 {% load static %}
-    <hr>
+    <br>
     <div class="row justify-content-md-center">
         <div class="col-4">
-            <img class="col-3" src="{% static "mains/images/logo.png" %}" width="200px" alt="">
+            <img class="col-3" src="{% static "pages/images/logo.png" %}" width="200px" alt="">
             <hr>
             <form action="{% url 'accounts:login' %}" method="POST">
                 {% csrf_token %}

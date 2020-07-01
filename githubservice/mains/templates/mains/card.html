@@ -1,0 +1,21 @@
+<div class="card"> 
+    <h5 class="card-header">
+        <a href="{% url 'accounts:profile' post.user.username %}">{{post.user.username}}</a>
+    </h5>
+
+    <img src="{{post.image.url}}" class="card-img-top">
+    <div class="card-body">
+        {% if post in user.like_posts.all %}
+        <i data-id="{{post.id}}" class="fas fa-heart fa-lg" style="color:red"></i> 
+        {% else %}
+        <i data-id="{{post.id}}" class="far fa-heart fa-lg" style="color:gray"></i>
+        {% endif %}
+    <i class="far fa-comment fa-lg" style="color:gray"></i>
+    <p>{{post.}}</p>
+    <p class="card-text">{{post.content}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<script>
+</script>
