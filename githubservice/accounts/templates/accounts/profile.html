@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- jumbotron start -->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-4"> 
+                <div class="row">
+                    <img class='col-8 rounded-circle' src="{{ user_profile.image.url }}" alt="">
+                </div>
+            </div>
+            <div class="col-8">
+                <h5>{{user_profile.username}}</h5>
+           
+                {% if user != user_profile %}
+                    {% if user_profile in user.follow.all %}
+                        <a class = "btn btn-primary" href="{% url 'accounts:follow' user_profile.id %}">팔로우취소</a>
+                    {% else %}
+                        <a class = "btn btn-primary" href="{% url 'accounts:follow' user_profile.id %}">팔로우</a>
+                    {% endif %}
+                {% endif %}             
+            </div>
+        </div>
+    </div>
+    <!-- jumbotron end -->
+    <!--card-->
+    <div class="row row-cols-3">
+        {% for post in user_profile.post_set.all %}
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ post.image.url }}"  alt="">
+                </div>    
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}
+
+{% comment %}차후에 이 페이지에는 db에 저장된 값 받아와서 본인 포트폴리오 확인할 수 있는 페이지로 구성할 예정임 {% endcomment %}
