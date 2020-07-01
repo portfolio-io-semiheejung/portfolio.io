@@ -12,7 +12,7 @@ def index(request):
 
 def template(request):
     posts = Post.objects.all()
-    print('-------------------------------------------',posts)
+    print('-------------------------------------------', posts)
     context = {
         'posts': posts,
     }
@@ -33,7 +33,8 @@ def create(request):
     context ={
         'form' : form,
     }    
-    return render(request, 'mains/form.html', context)
+    return render(request, 'mains/t_form.html', context)
+
 
 @login_required
 def like(request, pk):
@@ -52,3 +53,5 @@ def like(request, pk):
         'liked' : liked
     }
     return JsonResponse(context)
+
+

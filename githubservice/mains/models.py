@@ -7,9 +7,14 @@ from imagekit.processors import ResizeToFill, ResizeToFit, ResizeCanvas
 
 class Post(models.Model):
     content = models.CharField(max_length=200)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
+    image = ProcessedImageField(upload_to='%Y/%m/%d', # 경로
+                                processors=[ResizeToFill(500, 400)], 
+                                format='JPEG',
+                                options={'quality': 60}) 
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_posts')
+    
+
     class Meta:
-        ordering = ['-id']      
+        ordering = ['id']      
 
