@@ -111,5 +111,19 @@ font-weight:bold;
 }
 
 .cardhead{
+  color: black;
+  font-weight: bold;
+  font-size: 1.4em;
 
+}
+
+.skillimg{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.skillgroup{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
