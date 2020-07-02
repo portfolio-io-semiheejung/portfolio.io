@@ -7,5 +7,5 @@ urlpatterns = [
     path('template/', views.template, name='template'),
     path('create/', views.create, name='create'),
     path('<int:pk>/like/', views.like, name='like'),   
-    path('<int:pk>/dialog/', views.dialog, name='dialog'),   
+    path('guide/', views.guide, name='guide'),   
 ]    

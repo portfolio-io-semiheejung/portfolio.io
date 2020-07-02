@@ -55,8 +55,8 @@ def like(request, pk):
     return JsonResponse(context)
 
 
-def dialog(request,pk):
-    return render(request, 'mains/dialog.html')
+def guide(request):
+    return render(request, 'mains/guide.html')
 
 
    

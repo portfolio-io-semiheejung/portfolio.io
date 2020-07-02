@@ -18,7 +18,7 @@
             <div class="col-2">
               <img src="{% static 'img/portfolio/git.png' %}" alt="" style='width:40px;'>
             </div>
-            <div class="col-8">
+            <div class="col-7">
               <input id="check-username" class="form-control" type="text" placeholder="Github Username 확인">
             </div>
             <div class="col-2">
@@ -42,17 +42,11 @@
 <script>
 function myFunction() {
   checkUsername = document.querySelector('#check-url').getAttribute('href')
-
   URL = 'https://github.com/'
-
   USERNAME = document.querySelector('#check-username').value
-
   checkUsername = URL + USERNAME
-  //console.log(checkUsername)
   document.querySelector('#check-url').setAttribute('href', checkUsername)
   window.open(checkUsername,"","width=400,height=280")
-
-
 }
 </script>
 
