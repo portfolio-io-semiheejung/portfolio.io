@@ -39,4 +39,17 @@ def index(request):
     },)
 
 def about(request):
-    return render(request, 'portfolios/about.html')
+    color1 = '#e6dace'
+    color2 = 'rgb(244,236,230)'
+    color3 = 'blue'
+    color4 = 'black'
+    context = {
+        'color1' : color1,
+        'color2' : color2,
+        'color3' : color3,
+        'color4' : color4,
+    }
+    
+
+
+    return render(request, 'portfolios/about.html', context)

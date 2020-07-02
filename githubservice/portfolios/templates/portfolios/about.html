@@ -1,17 +1,23 @@
 {% extends 'portfolio.html' %}
 {% load static %}
 {% block style %}
-<link rel="stylesheet" href="{% static 'css/portfolio_about.css' %}">
-<style>    
+<link rel="stylesheet" href="{% static 'css/portfolio_about.css'%}">
+<style>
+body {
+  color: {{color4}};
+}
+
+.cardhead{
+  color: {{color4}};
+}
   </style>
 {% endblock  %}
     
 {% block body %}
 <!--20200630 header 부분 시작-->
-<div class="header sticky-top">      
-  <nav class="navbar navbar-expand-md bg-white navbar-white navsize">
+  <nav class="navbar navbar-expand-md bg-white navbar-white navsize fixed-top">
     <a class="text-dark" href="#"><span style="font-size: 1.5em; font-weight: bold;">
-     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
       heejung /</span> 데이터분석, 백앤드</a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -30,10 +36,7 @@
           </li>
           <li class="nav-item">
             <a class="text-dark" href="#edu">EXPERIENCE & EDUCATION &nbsp;</a>&nbsp;&nbsp;&nbsp;
-          </li>         
-          <li class="nav-item">
-            <a class="text-dark" href="#contact">CONTACT &nbsp;&nbsp;&nbsp;</a>
-          </li>    
+          </li>           
         </ul>
       </div>  
     </nav>          
@@ -42,26 +45,26 @@
 
 <!--20200630 about부분 시작-->
 <div class="main" id="about">
-<div class="mainleft" style="background-color: rgb(230, 218, 206);"></div>
+<div class="mainleft" style="background-color: {{color1}};"></div>
 <div class="mainright"></div>
 </div>
 <div class="maincard">
-  <div class="cardleft">
-    <div class="border-0 shadow p-3 mb-5" style="background-color: rgb(244, 236, 230);">
+  <div class="cardleft" style="padding-top: 75px;">
+    <div class="border-0 shadow p-3 mb-5" style="background-color: {{ color2 }};">
         <br>            
         <img class="rounded-circle" src="{% static 'img/portfolio/희정.jpg' %}" width="152px" height="200px">
         <br><br>       
         <p class="boldword">heejung <img src="{% static 'img/portfolio/git.png' %}" onclick="location.href='https://github.com/heejung-choi'" width="40px" height="40px">
                
         <br></p>
-        <hr width="50px" size="10" align="center" color="blue">
+        <hr width="50px" size="10" align="center" color="{{ color3 }}">
         <br>
         <p class="cardword">데이터분석, 백앤드 <br>
           choi951008@naver.com
         </p>
         <br>
-        <p class="cardword font-weight-bold" style="color:blue">
-        <span style="color:black">간략한 소개 :</span><br>
+        <p class="cardword font-weight-bold" style="color:{{ color3 }}">
+        <span style="color:{{ color4 }}">소개 :</span><br>
         트랜드 모니터링 습관, <br> 코딩은 결백적 미니멀리즘, <br>함께 성장하는 팀웍</p>
 
                    
@@ -255,7 +258,7 @@
   <!--20200630 희정 myDevelope Life 시각화 부분 끝-->
 
   </script>
-  <div class="cardright">
+  <div class="cardright" style="padding-top: 75px;">
   <h5 class="font-weight-bold">My develope Life</h5>
     <div id="chartdiv">
     </div>
@@ -267,26 +270,25 @@
       <img class="majorimg" src="https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg">
       <img class="majorimg" src="https://img.stackshare.io/service/993/pUBY5pVj.png">
       <img class="majorimg" src="https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png">
-      <img class="majorimg" src="https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg">
-      <img class="majorimg" src="https://img.stackshare.io/service/1020/OYIaJ1KK.png">
-      <img class="majorimg" src="https://img.stackshare.io/service/1052/YMxUfyWf.png">
+      
+      
   </div>    
 </div>
 
 <!--20200630 about부분 끝-->
 
 <!--20200630 edu부분 시작-->
-<div class="skill" id="skill" style="background-color: rgb(230, 218, 206);" >
+<div class="skill" id="skill" style="background-color: {{color1}};" >
   <div class="skiltop"></div>
   
   <div class="text-center"><h1 class="font-weight-bold skillfont">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill"{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
   Skill</h1></div><br>
   
   <!--20200630 card부분 시작-->
   <div class="skillcard shadow">
       <div class="card text-center d-flex justify-content-center">
-        <div class="card-header cardhead" style="background-color: rgb(244, 236, 230);">      
+        <div class="card-header cardhead" style="background-color: {{ color2 }};">      
         Application & Data
         </div>
           <div class="card-body">
@@ -310,7 +312,7 @@
   <!--20200630 card부분 시작-->
   <div class="skillcard shadow">
       <div class="card text-center d-flex justify-content-center">
-        <div class="card-header cardhead" style="background-color: rgb(244, 236, 230);">      
+        <div class="card-header cardhead" style="background-color: {{ color2 }};">      
         Utilities
         </div>
           <div class="card-body">
@@ -330,7 +332,7 @@
   <!--20200630 card부분 시작-->
   <div class="skillcard shadow">
       <div class="card text-center d-flex justify-content-center">
-        <div class="card-header cardhead" style="background-color: rgb(244, 236, 230);">      
+        <div class="card-header cardhead" style="background-color: {{ color2 }};">      
         DevOps
         </div>
           <div class="card-body">
@@ -352,7 +354,7 @@
   <!--20200630 card부분 시작-->
   <div class="skillcard shadow">
       <div class="card text-center d-flex justify-content-center">
-        <div class="card-header cardhead" style="background-color: rgb(244, 236, 230);">      
+        <div class="card-header cardhead" style="background-color: {{ color2 }};">      
         Business Tools
         </div>
           <div class="card-body">
@@ -376,61 +378,68 @@
 
 <!--20200701 프로젝트부분 시작-->
 
-<div class="skill" id="skill" style="background-color: rgb(230, 218, 206);">
+<div class="skill" id="skill" style="background-color: {{ color1 }};">
   <div class="skiltop"></div>
   <div class="text-center"><h1 class="font-weight-bold skillfont">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
   Projects</h1></div>
 
+  <!--프로젝트 edu카드부분 시작-->
   <!--프로젝트 카드부분 시작-->
   <br><br>
-  <div class="projectcard shadow">
+  <div class="projectcard shadow" id="project">
   <div class="card mb-3 d-flex justify-content-center">
   <div class="row no-gutters"> 
     <div class="col-md-7">
-      <div class="projecttext bg-dark">
-
-
-        <table class="table table-borderless">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
+      <div class="projecttext"><br>
+        <table class="table table-borderless" style="font-size: 0.8rem;">  
+        <!--table table-borderless -->
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th scope="row" class="pt-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>
+              <td class="align-middle pt-0">프로젝트명</td>
+              <td class="align-middle pt-0" colspan="5">58세대를 위한 건강정보시스템 & 건강마켓</td>              
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <th scope="row" class="pt-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>
+              <td class="align-middle pt-0">개발기간</td>
+              <td class="align-middle pt-0" colspan="5">2020.06.09-2020.06.27</td>              
             </tr>
             <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
+              <th scope="row" class="pt-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>        
+              <td class="align-middle pt-0">팀내역할</td>
+              <td class="align-middle pt-0" colspan="5">데이터분석 & 백앤드</td>  
             </tr>
+            <tr>
+              <th scope="row" class="pt-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>        
+              <td class="align-middle pt-0" >개발스텍</td>
+              <td class="align-middle pt-0" colspan="5">Spring Java R HTML</td>  
+            </tr>
+            <tr>
+              <th scope="row" class="pt-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>        
+              <td class="align-middle pt-0">프로젝트 설명</td>              
+            </tr>            
+            <tr>              
+              <td class="align-middle text-center pt-0 pb-0" colspan="6">
+              <div class="text-left pt-0">              
+              <p>58세대가 이용하기 편리한 건강정보 시스템 & 마켓을 구현하였다. 질병을 선택하면 질병별로 교차분석해 개개인의 건강에 맞춘 농산물들을 추천해주고 마켓을 통해 농가와 소비자가 다이렉트로 구매할 수 있게 되면서 국내 농가 수익 창출을 통해 농촌 경제를 활성화할 수 있다.</p>
+              </div>
+              <button class="button button2" onclick="window.open('https://github.com/heejung-choi/SpringMVC-R-opalproject','window_name','width=800,height=800,location=no,status=no,scrollbars=yes');">프로젝트 url 확인</button>
+              </td>              
+            </tr>           
           </tbody>
-        </table>
-        
-        <h1>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM17.99 9l-1.41-1.42-6.59 6.59-2.58-2.57-1.42 1.41 4 3.99z"/></svg>
-        </h1>
-      </div>
-
-      
-      
-
-        
-      
+        </table>        
+    </div>      
     </div>
     <div class="col-md-5">
       <img src="{% static 'img/portfolio/오팔.png' %}" class="card-img procardimg" >
@@ -442,8 +451,97 @@
 
 
 
-   
 
+<!--20200701 edu부분 시작-->
+
+<div class="skill" id="skill" style="background-color: {{ color1 }};">
+  <div class="skiltop"></div>
+  <div class="text-center"><h1 class="font-weight-bold skillfont">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  experience & education  </h1></div>
+  <br><br>
+    <!--20200630 experience card부분 시작-->
+  <div class="skillcard shadow">
+      <div class="card text-center d-flex justify-content-center">
+        <div class="card-header " style="background-color: {{ color2 }};">      
+       experience 
+        </div>
+          <table class="table table-borderless" >  
+        <!--table table-borderless -->
+          <tbody>
+          <br>
+            <tr>
+              <th scope="row" class="pt-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>
+              <td class="align-middle pt-0">경력 회사명</td>
+              <td class="align-middle pt-0" colspan="5">멀티캠퍼스</td>              
+            </tr>
+            <tr>
+              <th scope="row" class="pt-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>
+              <td class="align-middle pt-0">경력기간</td>
+              <td class="align-middle pt-0" colspan="5">2019.11.29-2020.07.06</td>              
+            </tr>
+            <tr>
+              <th scope="row" class="pt-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>        
+              <td class="align-middle pt-0">경력 내용</td>
+              <td class="align-middle pt-0" colspan="5">데이터분석 & 백앤드 강사 </td>  
+            </tr>            
+          </tbody>
+        </table>   
+          </div>
+      </div>
+    </div>  
+  <!--20200630 experience card 부분 끝-->
+
+ <br><br>
+     <!--20200630 educard부분 시작-->
+  <div class="skillcard shadow">
+      <div class="card text-center d-flex justify-content-center">
+        <div class="card-header " style="background-color: {{ color2 }};">      
+        education
+        </div>
+          <table class="table table-borderless" >  
+        <!--table table-borderless -->
+          <tbody>
+          <br>
+            <tr>
+              <th scope="row" class="pt-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>
+              <td class="align-middle pt-0">교육과정명</td>
+              <td class="align-middle pt-0" colspan="5">openAPI를 활용한 데이터 시각화 전처리</td>              
+            </tr>
+            <tr>
+              <th scope="row" class="pt-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>
+              <td class="align-middle pt-0">교육기간</td>
+              <td class="align-middle pt-0" colspan="5">2019.11.29-2020.07.06</td>              
+            </tr>
+            <tr>
+              <th scope="row" class="pt-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              </th>        
+              <td class="align-middle pt-0">교육 내용</td>
+              <td class="align-middle pt-0" colspan="5">데이터분석 & 백앤드</td>  
+            </tr>            
+          </tbody>
+        </table>   
+          </div>
+      </div>
+    </div>  
+  <!--20200630 educard 부분 끝-->
+
+
+
+
+
+</div>
 </div>
 
 
