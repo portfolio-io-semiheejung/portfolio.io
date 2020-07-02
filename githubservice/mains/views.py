@@ -53,3 +53,11 @@ def like(request, pk):
         'liked' : liked
     }
     return JsonResponse(context)
+
+
+def dialog(request,pk):
+    return render(request, 'mains/dialog.html')
+
+
+   
+

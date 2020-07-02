@@ -10,14 +10,7 @@
             </div>
             <div class="col-8">
                 <h5>{{user_profile.username}}</h5>
-           
-                {% if user != user_profile %}
-                    {% if user_profile in user.follow.all %}
-                        <a class = "btn btn-primary" href="{% url 'accounts:follow' user_profile.id %}">팔로우취소</a>
-                    {% else %}
-                        <a class = "btn btn-primary" href="{% url 'accounts:follow' user_profile.id %}">팔로우</a>
-                    {% endif %}
-                {% endif %}             
+                <a href="{% url 'accounts:update'%}"><button class="btn btn-primary btn-sm">정보수정</button></a>
             </div>
         </div>
     </div>

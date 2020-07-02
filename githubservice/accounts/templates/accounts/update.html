@@ -1,0 +1,26 @@
+  
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+ <div class="row justify-content-md-center">
+    <div class="col-5">
+        <div style='text-align:center'>
+            <img src="{% static "mains/images/logo.png" %}" width="150px" alt="" style='text-align:center'>  
+            <h4>회원정보수정</h4>     
+        </div>
+        <hr>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <hr>
+            <div style='text-align:center'>
+                <button class="btn btn-primary" type="reset">Reset</button>&nbsp;&nbsp;
+                <button class="btn btn-primary">Submit</button>        
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock  %}
+

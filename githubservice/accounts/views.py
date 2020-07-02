@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import CustomUserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
-from .models import User
 from django.http import JsonResponse
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
+from .forms import CustomUserCreationForm, CustomUserChangeForm
+
 
 # Create your views here.
 def signup(request):
@@ -54,17 +56,38 @@ def profile(request, username):
     context ={
         'user_profile': user_profile,
     }
-    print('--------------------------------------------------------------------------------',user_profile )
     return render(request,'accounts/profile.html', context)
 
 
-def check(request):
-    try:
-        user = User.objects.get(githubUsername=request.GET['githubUsername'])
-    except Exception as e:
-        user = None
-    result ={
-       # 'data' : model_to_dict(user)  # console에서 확인
-        'data' : "not exist" if user is None else "exist"
+@login_required
+def password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)  # Important!
+            messages.success(request, '비밀번호가 성공적으로 변경되었습니다!')
+            return redirect('accounts:profile', request.user.username)
+    else:
+        form = PasswordChangeForm(request.user)
+        context={
+            'form':form,
+        }
+    return render(request, 'accounts/password.html', context)
+
+
+@login_required
+def update(request):
+    if request.method == 'POST':
+        form = CustomUserChangeForm(
+            request.POST, instance=request.user
+            )
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:profile', request.user.username)
+    else:
+        form = CustomUserChangeForm(instance=request.user)
+    context = {
+        'form': form,
     }
-    return JsonResponse(result)
+    return render(request, 'accounts/update.html', context)
