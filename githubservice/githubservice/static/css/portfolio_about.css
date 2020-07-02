@@ -1,65 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@700&display=swap');
-
 .navsize {
-    height: 100px;
-    font-size: 1.2em;
-  }
+  height: 100px;
+  font-size: 1.2em;
+}
 
-  body{
-    font-family: 'Nanum Gothic', sans-serif;
-    padding-top: 75px;
-  }
+body{
+  font-family: 'Nanum Gothic', sans-serif;
+  padding-top: 75px;
+}
 
-  .main {
-    height: 750px;
-    display: flex;
-    flex-wrap: wrap;
-  }
+.main {
+  height: 750px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .mainleft {
-    width: 40%;
-  }
-
-  .mainright {
-    width: 60%;
-  }
-
-  .maincard{
-    width: 80%;
-    height: 400px;
-    position: absolute;
-    z-index: 100;
-    margin-top: 15%;
-    margin-bottom: 15%;
-    margin-left: 10%;
-    margin-right: 10%;
-    top: -8%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .cardleft {
-    width: 40%;
-  }
-
-  .cardright {
-    width: 55%;
-    margin-left: 5%;
-  }
-
-  .border-0 {
-    width: 100%;
-    height: 100%;
-    text-align: center;        
-  }
+.mainleft {
+  width: 40%;
   
-  .boldword{       
-    font-weight: bold; 
-    font-size: 1.5em;       
-  }
-  .cardword{                
-    font-size: 1.2em;       
-  }
+}
+
+.mainright {
+  width: 60%;
+  
+}
+
+.maincard{
+  width: 80%;
+  height: 600px;
+  position: absolute;
+  z-index: 100;
+  margin-top: 8%;
+  margin-bottom: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
+  top: -8%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardleft {
+  width: 40%;
+}
+
+.cardright {
+  width: 55%;
+  margin-left: 5%;
+}
+
+.border-0 {
+  width: 100%;
+  height: 100%;
+  text-align: center;        
+}
+
+.boldword{       
+  font-weight: bold; 
+  font-size: 1.5em;       
+}
+.cardword{                
+  font-size: 1.2em;       
+}
   
   hr{
   border-top: 3px solid rgba(0,0,0,.1);
@@ -139,9 +139,41 @@ font-weight:bold;
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
   width: 70%;
+  padding-
 }
 
 .procardimg{
   width: 100%;
   height: 100%;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 4px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: rgb(28, 46, 72);
+  color: white;
+  
+}
+
+.button2:hover {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(28, 46, 72);
+}
+tr {
+  line-height: 25px;
+  min-height: 25px;
+  height: 25px;
 }
