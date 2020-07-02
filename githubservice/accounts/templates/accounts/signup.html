@@ -1,18 +1,70 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
-{% block content %}
-    <div class="row justify-content-md-center">
-        <div class="col-6">
-            <br>
-            <form action="{% url 'accounts:signup' %}" method="POST">
-                {% csrf_token %}
-                {% bootstrap_form form %}
-                <label for="id_githubusername">Github Username</label>
-                <input type="text" class="form-control" id="id_githubusername">
-                <button class="btn btn-primary">확인</button>    
 
-                <button class="btn btn-primary">가입</button>    
-            </form>
-        </div>
+{% block style %}
+<style>
+
+</style>
+{% endblock style %}
+{% block content %}
+<div class="row justify-content-md-center">
+    <div class="col-6">
+        <br>
+        <form action="{% url 'accounts:signup' %}" method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <div>
+            <input type="text" id="check-username">
+           <a id="check-url" href="" target="_blank">
+           <button type="button" id="check-url" class="btn btn-primary"  onclick="myFunction();"> 
+            확인해보기 
+            </button>
+            </a>
+
+            </div>
+            <button class="btn btn-primary justify-content-md-center">가입</button>    
+        </form>
     </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Your Github</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  checkUsername = document.querySelector('#check-url').getAttribute('href')
+
+  URL = 'https://github.com/'
+
+  USERNAME = document.querySelector('#check-username').value
+
+  checkUsername = URL + USERNAME
+  console.log(checkUsername)
+  document.querySelector('#check-url').setAttribute('href', checkUsername)
+  window.open(checkUsername,"","width=400,height=200")
+
+
+}
+</script>
+
 {% endblock  %}

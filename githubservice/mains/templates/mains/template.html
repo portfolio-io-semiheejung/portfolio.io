@@ -1,93 +1,62 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class ='row row-cols-4'>  
-        {% for post in mains %}
-        {% include 'mains/card.html' %}
-        {% endfor %}
-
-        {% comment %} <div class="modal-dialog modal-xl">
-            <div>
-                {% include 'mains/p_main.html' %}
-            </div>
-        </div> {% endcomment %}
-        <!-- Button trigger modal -->
-    </div>   
-
-    <!-- jumbotron start -->
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-4"> 
-                <div class="row">
-                   <img src="{% static "mains/images/main_bg.png" %}" alt="" width="300px"></img>
-                </div>
-            </div>
-            <div class="col-8">
-                <h5>{{user_profile.username}}</h5>
-           
-            </div>
+    <div class ='row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4'>  
+        {% for post in posts %}
+        <div class='col mb-3'>
+            {% include 'mains/card.html' %}
         </div>
-            <form action="">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                자세히보기
-                </button> 
-            </form>       
-    </div>
-    <!-- jumbotron end -->
-    
-        
- 
-
+        {% endfor %}
+    </div>   
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">템플릿 자세히보기</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">템플릿 자세히보기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                {% include 'mains/p_main.html' %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            
-            {% include 'mains/p_main.html' %}
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-        </div>
-    </div>
     </div>
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
   // 1. 누구를
-var likeButtons = document.querySelectorAll('.fa-heart')   //클래스가 fa-heart인 친구들을 모두 찾아줘
-    likeButtons.forEach(function(likeButton){
+  var likeButtons = document.querySelectorAll('.fa-heart')   //클래스가 fa-heart인 친구들을 모두 찾아줘
+   likeButtons.forEach(function(likeButton){
+  // 2. 어떻게 했을때
     likeButton.addEventListener('click',function(event){
-      
-var targetId =event.target.dataset.id
-    axios.get(`/posts/${targetId}/like/`)
-    .then(function(res){
-    if(res.data.liked){
-        // 좋아요를 누른 경우(true)
-        event.target.style.color = 'red'
-        event.target.classList.remove('far')
-        event.target.classList.add('fas')
+      // 클릭이 일어나면 뭔가를 해줘
+      var targetId =event.target.dataset.id
+       axios.get(`/mains/${targetId}/like/`)
+      .then(function(res){
+        if(res.data.liked){
+          // 좋아요를 누른 경우(true)
+          event.target.style.color = 'red'
+          event.target.classList.remove('far')
+          event.target.classList.add('fas')
         }
-    else{
-        // 좋아요 취소한 경우(false)
-        event.target.style.color = 'black'
-        event.target.classList.remove('fas')
-        event.target.classList.add('far')
+        else{
+          // 좋아요 취소한 경우(false)
+          event.target.style.color = 'gray'
+          event.target.classList.remove('fas')
+          event.target.classList.add('far')
         }
       })
     }) 
   })
-
   </script>
 {% endblock %}

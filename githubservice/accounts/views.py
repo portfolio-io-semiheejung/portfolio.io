@@ -5,6 +5,8 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from .models import User
+from django.http import JsonResponse
 
 # Create your views here.
 def signup(request):
@@ -55,3 +57,14 @@ def profile(request, username):
     print('--------------------------------------------------------------------------------',user_profile )
     return render(request,'accounts/profile.html', context)
 
+
+def check(request):
+    try:
+        user = User.objects.get(githubUsername=request.GET['githubUsername'])
+    except Exception as e:
+        user = None
+    result ={
+       # 'data' : model_to_dict(user)  # console에서 확인
+        'data' : "not exist" if user is None else "exist"
+    }
+    return JsonResponse(result)
