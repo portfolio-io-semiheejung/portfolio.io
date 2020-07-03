@@ -9,10 +9,10 @@
 {% block body %}   
     <div class="headbutton">
     <div class="a">   
-    <button class="button button2">이전 페이지로</button>
+    <button class="button button2" onclick="location.href='{% url 'mains:template' %}'">이전 페이지로</button>
     </div>
     <div class="b">   
-    <button class="button button2">포트폴리오 데이터 입력하기</button>
+    <button class="button button2" onclick="location.href='{% url 'portfolios:insert' %}'">포트폴리오 데이터 입력하기</button>
     </div>
     </div>
 {% block container%}    

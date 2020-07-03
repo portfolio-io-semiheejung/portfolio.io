@@ -29,10 +29,14 @@ class Usercontent(models.Model):
     color = models.ForeignKey(Color, on_delete=models.CASCADE)
     allskill = models.ForeignKey(Skill, on_delete=models.CASCADE, related_name='allskill')
     majorskill = models.ForeignKey(Skill, on_delete=models.CASCADE, related_name='majorskill')
+    develop_content1 = models.CharField(max_length=20)
+    develop_content2 = models.CharField(max_length=20)
+    develop_content3 = models.CharField(max_length=20)
+    develop_content4 = models.CharField(max_length=20)
+    develop_content5 = models.CharField(max_length=20)
+    develop_content6 = models.CharField(max_length=20)
+   
 
-# class Develop(models.Model):
-#     develop_content = models.CharField(max_length=15)
-    
 
 # class Education(models.Model):
 #     edu_name = models.CharField(max_length=20)

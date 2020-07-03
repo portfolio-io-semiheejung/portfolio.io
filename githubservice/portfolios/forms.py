@@ -25,3 +25,4 @@ class UsercontentForm(forms.ModelForm):
     class Meta:
         model = Usercontent
         fields = '__all__'
+
