@@ -89,9 +89,9 @@ font-weight:bold;
     background-color: white;
 }
 
-.skill{
-    width:100%;
-
+.skillbottom{
+    
+  padding-bottom: 70px;
 }
 
 .skiltop{
@@ -177,3 +177,9 @@ tr {
   min-height: 25px;
   height: 25px;
 }
+
+footer{
+  background-color: white;
+
+}
+

@@ -281,8 +281,8 @@ body {
 <div class="skill" id="skill" style="background-color: {{color1}};" >
   <div class="skiltop"></div>
   
-  <div class="text-center"><h1 class="font-weight-bold skillfont">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill"{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  <div class="text-center"><h1 class="font-weight-bold skillfont" style="color:black">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
   Skill</h1></div><br>
   
   <!--20200630 card부분 시작-->
@@ -378,9 +378,9 @@ body {
 
 <!--20200701 프로젝트부분 시작-->
 
-<div class="skill" id="skill" style="background-color: {{ color1 }};">
+<div class="skill" id="skill" style="background-color: {{ color1 }}; padding-bottom: 70px;">
   <div class="skiltop"></div>
-  <div class="text-center"><h1 class="font-weight-bold skillfont">
+  <div class="text-center"><h1 class="font-weight-bold skillfont" style="color:black">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
   Projects</h1></div>
 
@@ -454,9 +454,9 @@ body {
 
 <!--20200701 edu부분 시작-->
 
-<div class="skill" id="skill" style="background-color: {{ color1 }};">
+<div class="skill" id="skill" style="background-color: {{ color1 }}; padding-bottom: 70px;">
   <div class="skiltop"></div>
-  <div class="text-center"><h1 class="font-weight-bold skillfont">
+  <div class="text-center"><h1 class="font-weight-bold skillfont" style="color:black">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
   experience & education  </h1></div>
   <br><br>
@@ -536,33 +536,37 @@ body {
       </div>
     </div>  
   <!--20200630 educard 부분 끝-->
-
-
-
-
-
 </div>
 </div>
 
+<div class="footer">
+  <div class="row" style="padding-top: 20px;  padding-bottom: 20px; font-size:0.9rem; color:black">
+  <div class="col-5 text-center">
+  <br>
+  <p>Copyright © 2020 - Portfolio.io<br>
+  저희의 github에 star 눌러주시면 언제든 사용가능합니다.<p>
+  <button type="button" class="btn btn-dark" onclick="location.href='https://github.com/stella-semimin'">semi</button>
+  <button type="button" class="btn btn-dark" onclick="location.href='https://github.com/heejung-choi'">heejung</button>
+  
+  </div>
+  <div class="col-2">  
+  </div>
+  <div class="col-2 text-center" style=>
+  <br>
+  <span class="font-weight-bold">github</span>
+  <br><br>
+  <img src="{% static 'img/portfolio/git.png' %}" onclick="location.href='https://github.com/heejung-choi'" width="40px" height="40px">
+  </div>
+  <div class="col-2 text-center">
+  <br>
+  <span class="font-weight-bold">email</span>
+  <br><br>
+  choi951008@naver.com
+  </div>
+  <div class="col-1"></div>
 
-
-
-
-
-
-
-<!--20200701 프로젝트부분 끝-->
-
-
-
-<!--<div class="skill" id="skill" style="background-color: rgb(230, 218, 206);" >
-  <div class="skiltop"></div>
-  <div class="text-center"><h1 class="font-weight-bold skillfont">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
-  Projects</h1></div>
-</div>-->
-
-              
+  </div>
+</div>           
 
 
 {% endblock  %}
