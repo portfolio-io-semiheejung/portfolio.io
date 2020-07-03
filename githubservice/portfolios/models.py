@@ -3,21 +3,6 @@ from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 from imagekit.processors import ResizeToFill, ResizeToFit, ResizeCanvas
 # Create your models here.
-
-<<<<<<< HEAD
-class Color(models.Model):
-    color1 = models.CharField(max_length=20)
-    color2 = models.CharField(max_length=20)
-    color3 = models.CharField(max_length=20)
-    color4 = models.CharField(max_length=20)
-
-
-class Portfolio(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    color = models.ForeignKey(Color, on_delete=models.CASCADE)
-
-=======
->>>>>>> 806a17355bcd884688a1544a5d80fc52bad6273e
 class Github(models.Model):
     profile_img = models.CharField(max_length=200)
     git_repourl = models.CharField(max_length=200)

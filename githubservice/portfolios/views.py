@@ -5,6 +5,10 @@ from datetime import datetime
 from django.http import JsonResponse 
 from requests.auth import HTTPBasicAuth
 import json
+from django.views.decorators.http import require_http_methods, require_POST
+from .forms import UsercontentForm
+from .models import Usercontent
+
 
 #for a in d[0]['ssh_url']:
 #    pprint(a)
@@ -53,5 +57,26 @@ def about(request):
     return render(request, 'portfolios/about.html', context)
 
 
-def insert(request): 
-    return render(request, 'portfolios/insert.html')
+def insert(request):    
+    if request.method == 'POST':
+        form = UsercontentForm(request.POST)
+        if form.is_valid():            
+            Usercontent = form.save()
+            return redirect('portfolios:detail', Usercontent.pk)
+    # POST가 아닌 다른 methods 일 때
+    else: 
+        form = UsercontentForm()
+    context = {        
+        'form': form,
+    }   
+    return render(request, 'portfolios/insert.html', context)
+
+def detail(request, Usercontent_pk):
+    movie = Movie.objects.get(pk=Usercontent.pk)
+    form = UsercontentForm()
+
+    context = {
+        'movie': movie,
+        'form' : form,
+    }
+    return render(request, 'movies/detail.html', context)
