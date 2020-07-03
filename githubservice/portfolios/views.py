@@ -50,13 +50,8 @@ def about(request):
         'color3' : color3,
         'color4' : color4,
     }
-<<<<<<< HEAD
-    
-    return render(request, 'portfolios/about.html', context)
-=======
     return render(request, 'portfolios/about.html', context)
 
 
 def insert(request): 
     return render(request, 'portfolios/insert.html')
->>>>>>> 6fe98260110e03b4bef5e1c99fef955cede0f529
