@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect,get_object_or_404
 from .forms import PostForm, CommentForm
 from .models import Post
-from portfolios.models import Color
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
@@ -13,11 +12,9 @@ def index(request):
 
 def template(request):
     posts = Post.objects.all()
-    colors = Color.objects.all()
     print('-------------------------------------------',posts)
     context = {
         'posts': posts,
-        'colors': colors,
     }
     return render(request,'mains/template.html', context)
 
