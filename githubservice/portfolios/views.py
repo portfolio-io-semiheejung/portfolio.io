@@ -49,7 +49,8 @@ def about(request):
         'color3' : color3,
         'color4' : color4,
     }
-    
-
-
     return render(request, 'portfolios/about.html', context)
+
+
+def insert(request): 
+    return render(request, 'portfolios/insert.html')
