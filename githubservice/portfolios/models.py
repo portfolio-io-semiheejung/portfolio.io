@@ -4,8 +4,15 @@ from django.conf import settings
 from imagekit.processors import ResizeToFill, ResizeToFit, ResizeCanvas
 # Create your models here.
 
+class Color(models.Model):
+    color1 = models.CharField(max_length=20)
+    color2 = models.CharField(max_length=20)
+    color3 = models.CharField(max_length=20)
+    color4 = models.CharField(max_length=20)
+
 class Portfolio(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    color = models.ForeignKey(Color, on_delete=models.CASCADE)
 
 class Github(models.Model):
     profile_img = models.CharField(max_length=200)
@@ -26,12 +33,6 @@ class Skil(models.Model):
     skill_img = models.CharField(max_length=200)
     skillkind = models.ForeignKey(Skillkind, on_delete=models.CASCADE)     
    
-class Color(models.Model):
-    color1 = models.CharField(max_length=20)
-    color2 = models.CharField(max_length=20)
-    color3 = models.CharField(max_length=20)
-    color4 = models.CharField(max_length=20)
-    portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
 
 class Aboutme(models.Model):
     job = models.CharField(max_length=15)
