@@ -1,18 +1,25 @@
+ {% load static %}
+
+ <style>
+ .color{
+    height:40px;
+ }
+ </style>
+ 
  <div class="card"> 
-    <a href="#" data-toggle="modal" data-target="#exampleModal2">
-     <a href="{% url 'mains:dialog' post.pk %}"> 
-        <img src="{{ post.image.url }}" class="card-img-top">
-        <div class="color">
-            <div class="color-body row">
-                <div class="col-6">
-                    <div style="background-color:red"></div>
-                    <div style="background-color:blue"></div>
-                    <div style="background-color:green"></div>
-                </div>
+    <!--test div-->
+    <div class='col-sm mt-4 mb-4' style="height:200px;">
+        <div class="row">
+            <div class="col">
+                <div class="color color1" style="background-color:pink;"> </div>
+                <div class="color color2" style="background-color:white;"> </div>
+                <div class="color color3" style="background-color:skyblue;"> </div>
+                <div class="color color4" style="background-color:magenta;"> </div>
             </div>
         </div>
-    </a>
-    <div class="card-body row">
+    </div> 
+        <!--test div-->
+    <div class="card-body row pt-0">
         <div class="col-6">
             {% if post in user.like_posts.all %}
                 <i data-id="{{post.id}}" class="fas fa-heart fa-lg" style="color:red"></i> 
@@ -22,31 +29,30 @@
             <a href="">{{post.like_users.count}}</a>
         </div>
         <div class="d-flex justify-content-center col-6">
-            <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">자세히보기</a>
+            <a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#card-modal-{{post.id}}">미리보기</a>
         </div>
     </div>
-</div> 
+</div>
 
 
 
-
-    <!-- Template Detail Modal Start-->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">템플릿 자세히보기</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                 ㅁㄴㅇㄻㄴㅇㄹ
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+<div class="modal fade" id="card-modal-{{ post.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header row">
+                <img class="ml-3"src="{% static "mains/images/logo3.png" %}" width="150" height="40" alt="Logo">
+                <h5 class="modal-title" id="exampleModalLabel">미리보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              {% include 'mains/p_main.html'%}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary">만들기</button>
             </div>
         </div>
     </div>
+</div>

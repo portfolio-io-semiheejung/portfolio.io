@@ -9,11 +9,15 @@ class Post(models.Model):
     content = models.CharField(max_length=200)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    image = ProcessedImageField(upload_to='media', # 경로
-                                processors=[ResizeToFill(500, 500)], #가로, 세로 길이
-                                format='PNG',
-                                options={'quality': 60}) # 원본에서 얼마만큼의 %의 화질?.. 용량문제와 이어짐
+    image = models.ImageField(upload_to='media')
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_posts')
     class Meta:
         ordering = ['-id']      
+
+class Comment(models.Model):
+    content = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, related_name='replies')
 

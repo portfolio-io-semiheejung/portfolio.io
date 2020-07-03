@@ -38,6 +38,7 @@ def index(request):
         'repo_url': repo_url  
     },)
 
+
 def about(request):
     color1 = '#e6dace'
     color2 = 'rgb(244,236,230)'
@@ -50,6 +51,4 @@ def about(request):
         'color4' : color4,
     }
     
-
-
     return render(request, 'portfolios/about.html', context)

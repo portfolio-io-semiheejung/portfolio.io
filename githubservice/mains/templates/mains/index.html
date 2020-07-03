@@ -33,8 +33,7 @@
 
 {% block content %}
     <!-- Main-->
-    <header class="main vh-100 my-5">
-        <div style="height:100px"></div>
+    <header class="main my-5">
         <div class="row align-middle justify-content-center">
             <div class="main-text col-4">
                 <div class="col-12 " style="height:60px">
@@ -50,29 +49,30 @@
                 </div>
                 <br>
                 <div class="col-12">
-                    <a class="btn btn-secondary col-9" href="/template.html"> 포트폴리오 만들기 +</a>
+                    <a class="btn btn-primary col-9" href="{% url 'mains:template' %}"> 포트폴리오 만들기 +</a>
                 </div>
                 <br>
                 <div class="col-12">
-                    <a class="btn btn-secondary col-9" href="/template.html"> 이용가이드 보기 + </a>
+                    <a class="btn btn-light col-9" href="{% url 'mains:guide' %}"> 이용가이드 보기 + </a>
                 </div>
             </div>
             <div class ="main-image col-8">
                 <img class="col-12" src="{% static "mains/images/main_bg.png" %}" alt="main_background">
             </div>
+
         </div>
     </header>
     <!-- About-->
     <section class="page-section bg-primary" id="about" style="height: 700px; background-color:white;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
+        <div class="container" style="background-color:white;">
+            <div class="justify-content-center" style="background-color:white;">
+                <div class="col text-center">
                     <div class="main-browser-text-area">
-                        <div class="main-browser-text-1" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
-                            <p><b><font style="color:#F77A4B;">원하는 정보를 입력</font>만 하면 누구나 쉽게<br></b></p>
+                        <div class="main-browser-text-1">
+                            <p><b>원하는 정보를 입력만 하면 누구나 쉽게<br></b></p>
                             <p>제작이 가능합니다.</p>
                         </div>
-                        <div class="main-browser-text-2" data-scroll="toggle(.fromRightIn, .fromRightOut)">
+                        <div class="main-browser-text-2">
                             <p>HTML을 몰라도 디자이너가 없어도 괜찮습니다.</p>
                             <p>자신의 언어로 원하는 문구를 넣고 이미지만 수정하면</p>
                             <p>원하는 포트폴리오를 만들어드리겠습니다.</p>
@@ -113,7 +113,7 @@
         </div>
     </section>
         <div class="template-btn d-block d-flex justify-content-center">
-            <a class="btn btn-secondary" href="{% url 'mains:template' %}"> 템플릿보기 </a>
+            <a class="btn btn-primary" href="{% url 'mains:template' %}"> 템플릿보기 </a>
         </div>
 
     <!-- Footer-->
@@ -123,4 +123,6 @@
             <div class="small text-center text-muted">저희의 github에 star<img src="https://toppng.com/uploads/preview/download-star-document-yellow-clipart-transparent-background-star-11562964878rcvhjmdsqc.png" style="width:20px"> 눌러주시면 언제든 사용가능합니다</div>
         </div>
     </footer>
+
 {% endblock  %}
+

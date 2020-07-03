@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect,get_object_or_404
-from .forms import PostForm
+from .forms import PostForm, CommentForm
 from .models import Post
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
+from django.views.decorators.http import require_POST
 
 # Create your views here.
-
 def index(request):
     return render(request,'mains/index.html')
 
@@ -18,7 +18,7 @@ def template(request):
     }
     return render(request,'mains/template.html', context)
 
-
+# 사용자가 입력하는건 아니고, 우리 db에 넣어서 template에 뿌릴 것
 @login_required
 def create(request):
     if request.method == 'POST':
@@ -58,6 +58,35 @@ def like(request, pk):
 def guide(request):
     return render(request, 'mains/guide.html')
 
+
+def detail(request, post_pk):
+    post = get_object_or_404(Post, pk=post_pk)
+    comment_form = CommentForm()
+    comments = post.comment_set.filter(parent__isnull=True)
+    context = {
+        'post': post,
+        'comment_form': comment_form,
+        'comments': comments,
+    }
+    return render(request, 'mains/detail.html', context)
+
+
+@require_POST
+def comment_create(request, pk):
+    if not request.user.is_authenticated:
+        return redirect('accounts:login')
+
+    post = get_object_or_404(Post, pk=pk)
+    comment_form = CommentForm(request.POST)
+    comments = post.comment_set.filter(parent__isnull=True)
+    parent_pk = request.POST.get('parent_pk')
+    if comment_form.is_valid():
+        comment = comment_form.save(commit=False)
+        comment.post = post
+        if parent_pk:
+            comment.parent_id = pk
+        comment.save()
+    return redirect('posts:detail', pk)
 
    
 
