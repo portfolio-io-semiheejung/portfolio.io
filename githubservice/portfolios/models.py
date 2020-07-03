@@ -2,11 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 from imagekit.processors import ResizeToFill, ResizeToFit, ResizeCanvas
-<<<<<<< HEAD
-# Create your models here.
-=======
 # Create your models here
->>>>>>> 2ac4a99dda059c8dd9db8d042f822fdcb6932f2e
 class Github(models.Model):
     profile_img = models.CharField(max_length=200)
     git_repourl = models.CharField(max_length=200)
