@@ -20,32 +20,41 @@
     #about {
         background-color: #ffffff;
     }
-
+    #main-text>p{
+        font-size:35px;
+        margin-bottom:10px;
+    }
+    #main-text>b{
+        font-weight:600;
+    }
+   
 </style>
 {% endblock style %}
 
 {% block content %}
     <!-- Main-->
-    <header class="main vh-100 my-n5">
-        <div class="row align-items-center justify-content-center text-center d-flex h-100">
+    <header class="main vh-100 my-5">
+        <div style="height:100px"></div>
+        <div class="row align-middle justify-content-center">
             <div class="main-text col-4">
-                <div class="col-12">
-                    <p>#취업을위한 #맞춤형 #무료</p>
+                <div class="col-12 " style="height:60px">
+                    <p style="font-size:16px; color: #5e5e5e;">#취업을위한 #맞춤형 #무료</p>
                     <br>
                     <br>
                 </div>
-                <div class="col-12">
+                <div class="col-12" id="main-text">
                     <p><b>10분</b>안에</p>
                     <p><b>쉽고</b></p>
-                    <p><b></b>간편</b>하게 만드는</p>
+                    <p><b>간편</b>하게 만드는</p>
                     <p><b>포트폴리오</b></p>
                 </div>
+                <br>
                 <div class="col-12">
                     <a class="btn btn-secondary col-9" href="/template.html"> 포트폴리오 만들기 +</a>
                 </div>
                 <br>
                 <div class="col-12">
-                    <a class="btn btn-secondary col-9" href="/template.html"> 사용설명서 보기 + </a>
+                    <a class="btn btn-secondary col-9" href="/template.html"> 이용가이드 보기 + </a>
                 </div>
             </div>
             <div class ="main-image col-8">
@@ -54,7 +63,7 @@
         </div>
     </header>
     <!-- About-->
-    <section class="page-section bg-primary" id="about" style="height: 700px">
+    <section class="page-section bg-primary" id="about" style="height: 700px; background-color:white;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
