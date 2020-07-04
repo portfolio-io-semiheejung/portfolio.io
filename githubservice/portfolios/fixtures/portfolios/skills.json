@@ -1,0 +1,1802 @@
+[
+{
+    "model": "portfolios.skill",
+    "pk": 1,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg",
+        "skill_img": "Mongoose"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 2,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1209/javascript.jpeg",
+        "skill_img": "JavaScript"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 3,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg",
+        "skill_img": "jQuery"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 4,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/993/pUBY5pVj.png",
+        "skill_img": "Python"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 5,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png",
+        "skill_img": "Node.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 6,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg",
+        "skill_img": "PHP"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 7,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1020/OYIaJ1KK.png",
+        "skill_img": "React"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 8,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1052/YMxUfyWf.png",
+        "skill_img": "nginx"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 9,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/995/K85ZWV2F.png",
+        "skill_img": "Java"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 10,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2538/kEpgHiC9.png",
+        "skill_img": "HTML5"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 11,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1025/logo-mysql-170x170.png",
+        "skill_img": "MySQL"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 12,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2652/ZWREQYdH_400x400.jpg",
+        "skill_img": "Google Fonts"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 13,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1030/leaf-360x360.png",
+        "skill_img": "MongoDB"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 14,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1028/ASOhU5xJ.png",
+        "skill_img": "PostgreSQL"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 15,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1051/fab.os.logo.apache.200.15011_400x400.jpg",
+        "skill_img": "Apache HTTP Server"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 16,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1101/C9QJ7V3X.png",
+        "skill_img": "Bootstrap"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 17,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3511/cof_orange_hex.jpg",
+        "skill_img": "Ubuntu"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 18,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1019/square.png",
+        "skill_img": "AngularJS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 19,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1031/redis.png",
+        "skill_img": "Redis"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 20,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/18/amazon-ec2.png",
+        "skill_img": "Amazon EC2"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 21,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/25/amazon-s3.png",
+        "skill_img": "Amazon S3"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 22,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/4109/16407404782_8b9c57eab3.jpg",
+        "skill_img": "ES6"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 23,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1612/bynNY5dJ.jpg",
+        "skill_img": "TypeScript"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 24,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1022/jqueryui_avatar_96.png",
+        "skill_img": "jQuery UI"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 25,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3837/paeckCWC.png",
+        "skill_img": "Vue.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 26,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png",
+        "skill_img": "C#"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 27,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1171/jCR2zNJV.png",
+        "skill_img": "Sass"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 28,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/989/ruby.png",
+        "skill_img": "Ruby"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 29,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/116/cZLxNFZS.jpg",
+        "skill_img": "Firebase"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 30,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/994/4aGjtNQv.png",
+        "skill_img": "Django"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 31,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/133/3wgIDj3j.png",
+        "skill_img": "Heroku"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 32,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2699/KoK6gHzp.jpg",
+        "skill_img": "React Native"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 33,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/992/AcA2LnWL_400x400.jpg",
+        "skill_img": "Laravel"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 34,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1010/m8jf0po4imu8t5eemjdd.png",
+        "skill_img": "Android SDK"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 35,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/4074/13142323.png",
+        "skill_img": "Redux"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 36,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1163/hashtag.png",
+        "skill_img": "ExpressJS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 37,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3820/12972006.png",
+        "skill_img": "GraphQL"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 38,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/990/x57_Lorv.png",
+        "skill_img": "Rails"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 39,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/6727/css.png",
+        "skill_img": "CSS 3"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 40,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/6755/2c45151a4a11d3a3c8e71bb34dd069d6_400x400.png",
+        "skill_img": "ASP.NET"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 41,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/295/Onjxs6Lw_400x400.jpg",
+        "skill_img": "DigitalOcean"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 42,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2927/nPzvMuo2_400x400.png",
+        "skill_img": "Spring Boot"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 43,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/213/W9gT7hZo.png",
+        "skill_img": "Microsoft Azure"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 44,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1909/aws-lambda.png",
+        "skill_img": "AWS Lambda"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 45,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1005/O6AczwfV_400x400.png",
+        "skill_img": "Go"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 46,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1063/kazUJooF_400x400.jpg",
+        "skill_img": "Kafka"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 47,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1061/rabbit.jpg",
+        "skill_img": "RabbitMQ"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 48,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1001/flask.jpg",
+        "skill_img": "Flask"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 49,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1147/markdown.png",
+        "skill_img": "Markdown"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 50,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1009/tuHsaI2U.png",
+        "skill_img": "Swift"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 51,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1187/tomcat.png",
+        "skill_img": "Apache Tomcat"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 52,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1056/J5gFiHbG.png",
+        "skill_img": "Microsoft IIS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 53,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/232/amazon-rds.png",
+        "skill_img": "Amazon RDS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 54,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1027/sql_server.png",
+        "skill_img": "Microsoft SQL Server"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 55,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1071/sqlite.jpg",
+        "skill_img": "SQLite"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 56,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/4240/1a61e4pu_400x400.jpg",
+        "skill_img": "Google Cloud Platform"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 57,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1615/mariadb-logo-400x400.png",
+        "skill_img": "MariaDB"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 58,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1656/vd4gAekh.png",
+        "skill_img": "Debian"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 59,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3069/centos-icon.png",
+        "skill_img": "CentOS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 60,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/518/s01TMTGn.png",
+        "skill_img": "Google Compute Engine"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 61,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1908/amazon-ecs.png",
+        "skill_img": "Amazon EC2 Container Service"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 62,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1161/vI0ZZlhZ_400x400.png",
+        "skill_img": "Socket.IO"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 63,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1049/cplusplus.png",
+        "skill_img": "C++"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 64,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1523/square.png",
+        "skill_img": "Material Design for Angular"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 65,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1008/xcode.png",
+        "skill_img": "Objective-C"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 66,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/876/bYMCvtHD_400x400.jpg",
+        "skill_img": "Ionic"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 67,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/139/s01TMTGn.png",
+        "skill_img": "Google App Engine"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 68,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1012/scala.png",
+        "skill_img": "Scala"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 69,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2946/XJRdVxx3.png",
+        "skill_img": "Electron"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 70,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/9195/animate-css.png",
+        "skill_img": "Animate.css"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 71,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1014/IoPy1dce_400x400.png",
+        "skill_img": ".NET"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 72,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3091/preview.png",
+        "skill_img": "OpenSSL"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 73,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1843/slick.png",
+        "skill_img": "Slick"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 74,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1017/Screen_Shot_2012-04-28_at_8.52.15_PM.png",
+        "skill_img": "Backbone.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 75,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1040/memcached-logo-200x152.png",
+        "skill_img": "Memcached"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 76,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1197/logosf_positif_03_icon.png",
+        "skill_img": "Symfony"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 77,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/no-img-open-source.png",
+        "skill_img": "C"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 78,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3745/cb8U-gL6_400x400.jpg",
+        "skill_img": "Angular 2"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 79,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1143/Handlebars.png",
+        "skill_img": "Handlebars.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 80,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3421/T3VyOpzk_400x400.png",
+        "skill_img": "AddThis"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 81,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3750/pCfEzr6L.png",
+        "skill_img": "Kotlin"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 82,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1032/cassandra_small.png",
+        "skill_img": "Cassandra"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 83,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/996/unnamed.jpg",
+        "skill_img": "Spring"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 84,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/8986/ndGU91r2_400x400.jpg",
+        "skill_img": "fancybox"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 85,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/389/amazon-dynamodb.png",
+        "skill_img": "Amazon DynamoDB"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 86,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/7180/flutter-mark-square-100.png",
+        "skill_img": "Flutter"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 87,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2438/lodash.png",
+        "skill_img": "Lodash"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 88,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1974/drop.png",
+        "skill_img": "Elixir"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 89,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1913/New_Project__7_.png",
+        "skill_img": "Typekit"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 90,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1195/ci_logo.png",
+        "skill_img": "CodeIgniter"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 91,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1070/v7txhrjp9pdqrkdtxxp0.png",
+        "skill_img": "Rust"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 92,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1178/slQydAMv.png",
+        "skill_img": "CoffeeScript"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 93,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2220/ca72c4715da998b0bf5d1c857958bed3.png",
+        "skill_img": "Apache Spark"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 94,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3643/Xrtdc94q_400x400.png",
+        "skill_img": "Moment.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 95,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1162/uJPMDhZq.png",
+        "skill_img": "Meteor"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 96,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1044/elephant_rgb_sq.png",
+        "skill_img": "Hadoop"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 97,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/210/aws-elastic-beanstalk.png",
+        "skill_img": "AWS Elastic Beanstalk"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 98,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://ucarecdn.com/04b55b4e-0ecc-4003-a89e-98f674075b3e/",
+        "skill_img": "Gatsby"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 99,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1170/3538330.png",
+        "skill_img": "Less"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 100,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1491/HgKolWB5_400x400.jpg",
+        "skill_img": "D3.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 101,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/395/amazon-sqs.png",
+        "skill_img": "Amazon SQS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 102,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/7488/select2.png",
+        "skill_img": "Select2"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 103,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1213/r-logo.png",
+        "skill_img": "R Language"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 104,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1646/Twitter-02.png",
+        "skill_img": "Dart"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 105,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5508/CyUH653y.png",
+        "skill_img": "Apollo"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 106,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1150/underscore-js.png",
+        "skill_img": "Underscore"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 107,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1904/_.png",
+        "skill_img": "Material-UI"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 108,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1630/New_Project__67_.png",
+        "skill_img": "Django REST framework"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 109,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5936/nextjs.png",
+        "skill_img": "Next.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 110,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1105/ocLJW3ku_400x400.jpg",
+        "skill_img": "Foundation"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 111,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/6403/9141961.png",
+        "skill_img": ".NET Core"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 112,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1075/celery.png",
+        "skill_img": "Celery"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 113,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3118/openresty.png",
+        "skill_img": "OpenResty"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 114,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1048/perl.png",
+        "skill_img": "Perl"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 115,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1026/jT-HJYJg.png",
+        "skill_img": "Oracle"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 116,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3597/o_bigger_400x400.png",
+        "skill_img": "Prototype"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 117,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/10483/linux.png",
+        "skill_img": "Linux"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 118,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/211/RDXWoY7W.png",
+        "skill_img": "Xamarin"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 119,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3350/8261421.png",
+        "skill_img": "React Router"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 120,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1003/Clojure_300x300.png",
+        "skill_img": "Clojure"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 121,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1175/pug.png",
+        "skill_img": "Pug"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 122,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1018/3s1seyc0csl75btyw1vl.png",
+        "skill_img": "Ember.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 123,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/388/amazon-vpc.png",
+        "skill_img": "Amazon VPC"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 124,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1106/semantic-ui.png",
+        "skill_img": "Semantic UI"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 125,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/4374/SiHaeog__400x400.jpg",
+        "skill_img": "Quantcast"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 126,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/392/amazon-elasticache.png",
+        "skill_img": "Amazon ElastiCache"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 127,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/694/Cloud_Storage.png",
+        "skill_img": "Google Cloud Storage"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 128,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/9006/w8NDcWwU_400x400.png",
+        "skill_img": "Gravity Forms"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 129,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/197/854d85d0c77271af224b455f81b5fc88.png",
+        "skill_img": "Red Hat OpenShift"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 130,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/386/amazon-redshift.png",
+        "skill_img": "Amazon Redshift"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 131,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2873/9lxca5AK_400x400.jpg",
+        "skill_img": "LiteSpeed"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 132,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3372/yui.jpg",
+        "skill_img": "YUI Library"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 133,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3130/airflow.png",
+        "skill_img": "Airflow"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 134,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2880/1024px-JSON_vector_logo.svg.png",
+        "skill_img": "JSON"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 135,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1142/197655.png",
+        "skill_img": "Mustache"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 136,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1054/icon.png",
+        "skill_img": "Passenger"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 137,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1023/80508321d8ce3ba8aa264380bb7eba33_400x400.png",
+        "skill_img": "jQuery Mobile"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 138,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1435/Vx4_Psj1.png",
+        "skill_img": "Highcharts"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 139,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1078/4b7277462dadad85454ab427ce3f0ca7.png",
+        "skill_img": "Sidekiq"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 140,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2180/1284191.png",
+        "skill_img": "Pandas"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 141,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1756/1uNl_IZX.png",
+        "skill_img": "Hibernate"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 142,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2015/GN559Lfb.png",
+        "skill_img": "Materialize"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 143,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1158/hugo-icon.png",
+        "skill_img": "Hugo"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 144,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/997/6d180ca6647e7f690c2615a86e7c2843.png",
+        "skill_img": "Groovy"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 145,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1482/FbkjM42a.png",
+        "skill_img": "Neo4j"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 146,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1663/x65RF1Rg_400x400.png",
+        "skill_img": "Plesk"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 147,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/6163/PzNbCwXH.jpg",
+        "skill_img": "Vuetify"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 148,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/695/BigQuery.png",
+        "skill_img": "Google BigQuery"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 149,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1069/oCgm29k9.png",
+        "skill_img": "Haskell"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 150,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2886/ios-logo.png",
+        "skill_img": "iOS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 151,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1587/s01TMTGn.png",
+        "skill_img": "Google Kubernetes Engine"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 152,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/7304/23360933.png",
+        "skill_img": "Nuxt.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 153,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/6705/6128107.png",
+        "skill_img": "vuex"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 154,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/11331/asp.net-core.png",
+        "skill_img": "ASP.NET Core"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 155,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5095/serverless-logo.png",
+        "skill_img": "Serverless"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 156,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5537/oi64YzXY.jpg",
+        "skill_img": "Create React App"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 157,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1396/fc3a45a16c93d59408e04097e8bef1e8.png",
+        "skill_img": "InfluxDB"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 158,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1716/cordova_256.png",
+        "skill_img": "Apache Cordova"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 159,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1091/gunicorn.png",
+        "skill_img": "Gunicorn"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 160,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1773/bxLhidly.png",
+        "skill_img": "Akka"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 161,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/9785/ANnL6CuP_400x400.jpg",
+        "skill_img": "Elementor"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 162,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3262/-s9uoLIN.png",
+        "skill_img": "Phoenix Framework"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 163,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3866/_GD1-XrU_400x400.jpg",
+        "skill_img": "Chart.js"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 164,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2118/128px-Lua-Logo.svg.png",
+        "skill_img": "Lua"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 165,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/6112/12101536.png",
+        "skill_img": "Ant Design"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 166,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2605/_fBe-iYT.jpeg",
+        "skill_img": "NativeScript"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 167,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3681/powershell-logo.png",
+        "skill_img": "PowerShell"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 168,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5368/icon.png",
+        "skill_img": "Ionicons"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 169,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/24/631d437cd8e04903f69766a85d8a5540.png",
+        "skill_img": "Linode"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 170,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/7035/icon.png",
+        "skill_img": "Prettier"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 171,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2179/preview.jpeg",
+        "skill_img": "NumPy"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 172,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5693/7730351a5c782c7e25523388bfa8e393_400x400.jpeg",
+        "skill_img": "DataTables"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 173,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5991/mootools.twitter_400x400.png",
+        "skill_img": "MooTools"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 174,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/8747/4zsOyxko_400x400.jpg",
+        "skill_img": "NestJS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 175,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/231/amazon-ebs.png",
+        "skill_img": "Amazon EBS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 176,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/115/preview.png",
+        "skill_img": "Pusher"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 177,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/777/NgaEDjHt.jpg",
+        "skill_img": "PhoneGap"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 178,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1013/HqN22PuY.png",
+        "skill_img": "Play"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 179,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2084/CGKUrcD9_400x400.jpg",
+        "skill_img": "Unity"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 180,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/4670/Tb-g6Nu3_400x400.jpg",
+        "skill_img": "gRPC"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 181,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1004/cbdf77412da183e43d41c0c0f9a7005a.jpeg",
+        "skill_img": "Erlang"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 182,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1796/984368.png",
+        "skill_img": "RxJS"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 183,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/434/amazon-rds.png",
+        "skill_img": "Amazon RDS for PostgreSQL"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 184,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3211/3591786.png",
+        "skill_img": "Sequelize"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 185,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5602/adobe-xd-logo.png",
+        "skill_img": "Adobe XD"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 186,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/4009/cZHhsF-c_normal.png",
+        "skill_img": "Elm"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 187,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1688/New_Project__65_.png",
+        "skill_img": "Composer"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 188,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1062/vlz__1_.png",
+        "skill_img": "ActiveMQ"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 189,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/7374/react-redux.png",
+        "skill_img": "React Redux"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 190,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/6749/styled-components.png",
+        "skill_img": "styled-components"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 191,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5527/9kVhSQ9y_400x400.jpg",
+        "skill_img": "Angular CLI"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 192,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/999/logo.png",
+        "skill_img": "Sinatra"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 193,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/5739/atlas-360x360.png",
+        "skill_img": "MongoDB Atlas"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 194,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3318/I7ZBJ4-L.png",
+        "skill_img": "Material Design Lite"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 195,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1673/bash-icon.png",
+        "skill_img": "GNU Bash"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 196,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/2099/azure-storage.png",
+        "skill_img": "Azure Storage"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 197,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3860/4unoiuHt_400x400.jpg",
+        "skill_img": "Metabase"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 198,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1107/2247444e82685c05034fc296fc331472.png",
+        "skill_img": "UIkIt"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 199,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/3994/guidelines-icon-192x192.png",
+        "skill_img": "Material Design"
+    }
+},
+{
+    "model": "portfolios.skill",
+    "pk": 200,
+    "fields": {
+        "skill_kind": "Application&Data",
+        "skill_name": "https://img.stackshare.io/service/1053/unicorn.png",
+        "skill_img": "Unicorn"
+    }
+}
+]
