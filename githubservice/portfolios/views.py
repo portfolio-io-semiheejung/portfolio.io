@@ -7,25 +7,23 @@ from requests.auth import HTTPBasicAuth
 import json
 from django.views.decorators.http import require_http_methods, require_POST
 from django.contrib.auth.decorators import login_required
+from accounts.forms import CustomUserCreationForm
+from django.contrib.auth import get_user_model
 from .forms import UsercontentForm
 from .models import Usercontent
-from accounts.models import User
-from accounts.forms import CustomUserCreationForm
 #for a in d[0]['ssh_url']:
 #    pprint(a)
 
+
+User = get_user_model()
+
+
 @login_required
 def index(request):
-    # username = request.GET['username']
-    # url = 'https://api.github.com/users/%s' % username
-    #userindex = User.objects.get(pk=2)
-    #username = userindex.github_username
-    #print(userindex)
-    gitname = 'heejung-choi'
-    url = 'https://api.github.com/users/'+gitname
+    git_name = request.user.github_username
+    url = f'https://api.github.com/users/{git_name}'
     response = requests.get(url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).json()
-    #print(response)
-    repo_url = 'https://api.github.com/users/'+gitname+'/repos'       
+    repo_url = f'https://api.github.com/users/{git_name}/repos'       
     repo_load = json.loads(requests.get(repo_url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).text)    
 
     repo_name = []
@@ -40,21 +38,21 @@ def index(request):
     pprint("---------------------")
     #pprint(repo_name)
 
-    return render(request,'portfolios/index.html',{
+    context = {
         'name': response['login'],
         'profile_img_url': response['avatar_url'],
         'email': response['email'],
         'repo_name': repo_name,
         'repo_url': repo_url,
-        
-          
-    },)
+    }
+
+    return render(request,'portfolios/index.html', context)
+
 
 @login_required
 def about(request):
-    content = Usercontent.objects.get(pk=1)
+    content = Usercontent.objects.get(user_id=request.user.pk)
     pprint(content)
-
     color1 = '#e6dace'
     color2 = 'rgb(244,236,230)'
     color3 = 'blue'
@@ -68,12 +66,12 @@ def about(request):
         
     }
     return render(request, 'portfolios/about.html', context)
+    
 @login_required
 def insert(request):
-
     if request.method == 'POST':
         form = UsercontentForm(request.POST)
-        if form.is_valid():            
+        if form.is_valid():
             Usercontent = form.save(commit=False)
             Usercontent.user = request.user
             Usercontent.save()
