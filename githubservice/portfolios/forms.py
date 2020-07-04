@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usercontent
+from .models import Usercontent, Skill
 
 #from .models import 
 
@@ -28,7 +28,7 @@ class UsercontentForm(forms.ModelForm):
         widget=forms.TextInput(
             attrs={
                 'class': 'my-develop_content1 form-control',
-                'placeholder': '주요 프로젝트나 경력을 입력하세요.',             
+                'placeholder': '주요 프로젝트나 경력 1번을 입력하세요.',             
             }
         )
     )
@@ -38,7 +38,7 @@ class UsercontentForm(forms.ModelForm):
         widget=forms.TextInput(
             attrs={
                 'class': 'my-develop_content2 form-control',
-                'placeholder': '주요 프로젝트나 경력을 입력하세요.',             
+                'placeholder': '주요 프로젝트나 경력 2번을 입력하세요.',             
             }
         )
     ) 
@@ -48,7 +48,7 @@ class UsercontentForm(forms.ModelForm):
         widget=forms.TextInput(
             attrs={
                 'class': 'my-develop_content3 form-control',
-                'placeholder': '주요 프로젝트나 경력을 입력하세요.',             
+                'placeholder': '주요 프로젝트나 경력 3번을 입력하세요.',             
             }
         )
     ) 
@@ -58,7 +58,7 @@ class UsercontentForm(forms.ModelForm):
         widget=forms.TextInput(
             attrs={
                 'class': 'my-develop_content4 form-control',
-                'placeholder': '주요 프로젝트나 경력을 입력하세요.',             
+                'placeholder': '주요 프로젝트나 경력 4번을 입력하세요.',             
             }
         )
     ) 
@@ -68,7 +68,7 @@ class UsercontentForm(forms.ModelForm):
         widget=forms.TextInput(
             attrs={
                 'class': 'my-develop_content5 form-control',
-                'placeholder': '주요 프로젝트나 경력을 입력하세요.',             
+                'placeholder': '주요 프로젝트나 경력 5번을 입력하세요.',             
             }
         )
     ) 
@@ -81,11 +81,20 @@ class UsercontentForm(forms.ModelForm):
                 'placeholder': '주요 프로젝트나 경력을 입력하세요.',             
             }
         )
-    )     
+    )    
+
+    all_skills = forms.ModelMultipleChoiceField(
+        queryset=Skill.objects.all(),
+        widget=forms.CheckboxSelectMultiple()
+    )
+
+
+
     class Meta:
         model = Usercontent
         #fields = [
         #    'job', 'introduce','develop_content1','develop_content2','develop_content3','develop_content4','develop_content5','develop_content6'
         #]
-        fields = '__all__'
+        #fields = '__all__'
+        exclude =('user',)
 

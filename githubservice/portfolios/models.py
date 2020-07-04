@@ -16,39 +16,37 @@ class Github(models.Model):
 
 class Skill(models.Model):
     skill_kind = models.CharField(max_length=20)  
-    skill_name = models.CharField(max_length=20)
+    skill_name = models.CharField(max_length=100)
     skill_img = models.CharField(max_length=200)
 
 
 class Usercontent(models.Model):
     job = models.CharField(max_length=15)
     introduce = models.CharField(max_length=200)
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) 
-    color = models.ForeignKey(Color, on_delete=models.CASCADE)
-    allskill = models.ForeignKey(Skill, on_delete=models.CASCADE, related_name='allskill')
-    majorskill = models.ForeignKey(Skill, on_delete=models.CASCADE, related_name='majorskill')
     develop_content1 = models.CharField(max_length=20)
     develop_content2 = models.CharField(max_length=20)
     develop_content3 = models.CharField(max_length=20)
     develop_content4 = models.CharField(max_length=20)
     develop_content5 = models.CharField(max_length=20)
     develop_content6 = models.CharField(max_length=20)
-   
-
-
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) 
+    color = models.ForeignKey(Color, on_delete=models.CASCADE)
+    all_skills = models.ManyToManyField(Skill, related_name='all_contents', null=True)
+ 
+ 
 # class Education(models.Model):
 #     edu_name = models.CharField(max_length=20)
 #     edu_content = models.TextField()
 #     edu_data_start = models.DateField()
 #     edu_data_finish = models.DateField()
-#     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
+#     usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE)
 
 # class Experience(models.Model):
 #     ex_name = models.CharField(max_length=20)
 #     ex_content = models.TextField()
 #     ex_data_start = models.DateField()
 #     ex_data_finish = models.DateField()
-#     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
+#     usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE)
 #     class Meta:
 #         ordering = ['-ex_data_start']
 
