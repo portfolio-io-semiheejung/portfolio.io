@@ -18,6 +18,7 @@ class Comment(models.Model):
     content = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, related_name='replies')
-
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) #작성자는 user모델과 연결
+    # photo = models.ForeignKey(profile_img, on_delete=models.CASCADE) #profile의 github.profile_img받아오기
+    # parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, related_name='replies')
+    # 대댓글

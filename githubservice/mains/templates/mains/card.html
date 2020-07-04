@@ -5,16 +5,17 @@
     height:40px;
  }
  </style>
- 
+ {% block content %}
+
  <div class="card"> 
     <!--template에 보이는 card page-->
     <div class='col-sm mt-4 mb-4' style="height:200px;">
         <div class="row">
             <div class="col">
-                <div class="color color1" style="background-color:pink;"> </div>
-                <div class="color color2" style="background-color:white;"> </div>
-                <div class="color color3" style="background-color:skyblue;"> </div>
-                <div class="color color4" style="background-color:magenta;"> </div>
+                <div class="color color1" style="background-color:pink;">{{color.color1}} </div>
+                <div class="color color2" style="background-color:white;">{{color.color1}} </div>
+                <div class="color color3" style="background-color:skyblue;">{{color.color1}} </div>
+                <div class="color color4" style="background-color:magenta;">{{color.color1}} </div>
             </div>
         </div>
     </div> 
@@ -55,3 +56,5 @@
         </div>
     </div>
 </div>
+
+  {% endblock %}
