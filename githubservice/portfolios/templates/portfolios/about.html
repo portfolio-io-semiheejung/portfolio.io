@@ -12,13 +12,16 @@ body {
 }
   </style>
 {% endblock  %}
-    
+  
 {% block body %}
+
+
 <!--20200630 header 부분 시작-->
   <nav class="navbar navbar-expand-md bg-white navbar-white navsize fixed-top">
     <a class="text-dark" href="#"><span style="font-size: 1.5em; font-weight: bold;">
      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
-      heejung /</span> 데이터분석, 백앤드</a>
+      heejung /</span> {{content.job}}</a>
+     
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -59,13 +62,14 @@ body {
         <br></p>
         <hr width="50px" size="10" align="center" color="{{ color3 }}">
         <br>
-        <p class="cardword">데이터분석, 백앤드 <br>
+        <p class="cardword">{{content.job}}<br>
           choi951008@naver.com
         </p>
         <br>
         <p class="cardword font-weight-bold" style="color:{{ color3 }}">
         <span style="color:{{ color4 }}">소개 :</span><br>
-        트랜드 모니터링 습관, <br> 코딩은 결백적 미니멀리즘, <br>함께 성장하는 팀웍</p>
+        {{content.introduce}}
+        </p>
 
                    
                 
@@ -96,32 +100,32 @@ body {
       "category": "",
       "year": "1",
       "size": 3,
-      "text": "스마트시티(빅데이터)"
+      "text": "{{content.develop_content1}}"
     }, {
       "category": "",
       "year": "2",
       "size": 3,
-      "text": "경영정보학부 졸업"
+      "text": "{{content.develop_content2}}"
     }, {
       "category": "",
       "year": "3",
       "size": 3,
-      "text": "빅데이터 교육과정 수강"
+      "text": "{{content.develop_content3}}"
     }, {
       "category": "",
       "year": "4",
       "size": 3,
-      "text": "골목상권(SpringMVC/Java)"
+      "text": "{{content.develop_content4}}"
     }, {
       "category": "",
       "year": "5",
       "size": 3,
-      "text": "니카내카(기획)"
+      "text": "{{content.develop_content5}}"
     }, {
       "category": "",
       "year": "6",
       "size": 3,
-      "text": "포트폴리오(Django/Python)"
+      "text": "{{content.develop_content6}}"
     }
   ];
 
