@@ -69,12 +69,15 @@ def about(request):
     }
     return render(request, 'portfolios/about.html', context)
 @login_required
-def insert(request):    
+def insert(request):
+
     if request.method == 'POST':
         form = UsercontentForm(request.POST)
         if form.is_valid():            
-            Usercontent = form.save()
-            return redirect('portfolios:about', Usercontent.pk)
+            Usercontent = form.save(commit=False)
+            Usercontent.user = request.user
+            Usercontent.save()
+            return redirect('portfolios:about')
     # POST가 아닌 다른 methods 일 때
     else: 
         form = UsercontentForm()
