@@ -2,7 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 from imagekit.processors import ResizeToFill, ResizeToFit, ResizeCanvas
+from mains.models import Color
 # Create your models here.
+
 class Github(models.Model):
     profile_img = models.CharField(max_length=200)
     git_repourl = models.CharField(max_length=200)
@@ -11,16 +13,12 @@ class Github(models.Model):
     git_email = models.CharField(max_length=200)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
-class Color(models.Model):
-    color1 = models.CharField(max_length=20)
-    color2 = models.CharField(max_length=20)
-    color3 = models.CharField(max_length=20)
-    color4 = models.CharField(max_length=20)
 
 class Skill(models.Model):
     skill_kind = models.CharField(max_length=20)  
     skill_name = models.CharField(max_length=20)
     skill_img = models.CharField(max_length=200)
+
 
 class Usercontent(models.Model):
     job = models.CharField(max_length=15)

@@ -1,52 +1,37 @@
 {% load bootstrap4 %}
 {% load static %}
-{% block content %}
 
-<h2>댓글페이지 test</h2>
-<p>id값 : {{post.pk}}</p>
-<p>content : {{post.content}}</p>
-<table class="table">
-    <tbody>
-        <tr>
-            <td scope="row">사진</td>
-            <td>아이디</td>
-            <td>댓글내용</td>
-            <td>날짜</td>
-        </tr>
-        <tr>
-            <td scope="row">사진</td>
-            <td>아이디</td>
-            <td>댓글내용</td>
-            <td>날짜</td>
-        </tr>
-        <tr>
-            <td scope="row">사진</td>
-            <td>아이디</td>
-            <td>댓글내용</td>
-            <td>날짜</td>
-        </tr>        
-        
-    </tbody>
-</table>
+<h5># {{post.pk}}번째 색상</h5>
+ <!-- 댓글 -->
+ <table>
+  
+  {% for comment in comments %}
+  <div class=row>
+    {% if comment.post_id == post.pk %}
+    <div class="col-3">{{ user.github_img }}</div>
+    <div class="col-6">{{ comment.content }}</div>
+    <div class="col-3">{{ comment.created_at|date:"Y-m-d" }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+  </table>
 
+  <hr>
 <!-- 댓글 작성 form -->
-  {% if request.user.is_authenticated %}
+  {% if request.user.is_authenticated %} 
     <form action="{% url 'mains:comment_create' post.pk %}" method="POST">
       {% csrf_token %}
-      {% for field in comment_form %}
-        <div class="form-row align-items-center justify-content-between">
-          <div class="col-8 col-md-10 my-1">
-            {{ field }}
-            {{ field.pk }}
-          </div>
-          <div class="col-auto my-1">
-            <button class="btn btn-primary btn-sm">Submit</button>
-          </div>
+      <div class="row">
+        <div class="col-10">
+        {% bootstrap_field comment_form.content show_label=False %}
+        {% comment %} {% bootstrap_form comment_form %} {% endcomment %}
         </div>
-      {% endfor %}
+        <div class="col-2">
+          <button class="btn btn-primary btn-sm">Submit</button>
+        </div>
+      </div>
     </form>
   {% else %}
     <a href="{% url 'accounts:login' %}">댓글을 작성하려면 로그인 하세요.</a>
   {% endif %}
-{% endblock  %}
 
