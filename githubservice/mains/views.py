@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
-from django.views.decorators.http import require_POST
-from pprint import pprint
-from .forms import PostForm, CommentForm
-from .models import Post, Color, Comment
-=======
 from django.shortcuts import render, redirect,get_object_or_404
-from portfolios.models import Color, Skill
+from portfolios.models import Skill
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
@@ -16,9 +7,7 @@ from portfolios.forms import UsercontentForm
 from portfolios.models import Usercontent
 from pprint import pprint
 from .forms import PostForm, CommentForm
-from .models import Post
->>>>>>> f9042914d202a28b3b81f54d7ee7a525aed97049
-
+from .models import Post, Color, Comment
 # User = get_user_model()
 # Create your views here.
 def index(request):
@@ -27,22 +16,10 @@ def index(request):
 @login_required
 def template(request):
     posts = Post.objects.all()
-<<<<<<< HEAD
-    comment_form = CommentForm()
-    comments = Comment.objects.all()
-    context = {
-        'posts': posts,
-        'comment_form': comment_form,
-        'comments' : comments,
-    }
-    #print('-------------------------------------------',posts)
-    return render(request,'mains/template.html', context)
-
-
-=======
     colors = Color.objects.all()
-    skills = Skill.objects.all()    
-    
+    skills = Skill.objects.all()
+    comment_form = CommentForm()
+    comments = Comment.objects.all()    
     if request.method == 'POST':
         form = UsercontentForm(request.POST)
         # print(form.is_valid())
@@ -64,10 +41,11 @@ def template(request):
         'colors': colors,
         'skills': skills,
         'form': form,
+        'comment_form': comment_form,
+        'comments' : comments,
     }
     return render(request,'mains/template.html', context)    
     
->>>>>>> f9042914d202a28b3b81f54d7ee7a525aed97049
 # 사용자가 입력하는건 아니고, 우리 db에 넣어서 template에 뿌릴 것
 @login_required
 def create(request):
