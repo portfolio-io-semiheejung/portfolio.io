@@ -9,8 +9,9 @@ from django.views.decorators.http import require_http_methods, require_POST
 from django.contrib.auth.decorators import login_required
 from accounts.forms import CustomUserCreationForm
 from django.contrib.auth import get_user_model
+from mains.models import Color
 from .forms import UsercontentForm
-from .models import Usercontent
+from .models import Usercontent, Skill
 #for a in d[0]['ssh_url']:
 #    pprint(a)
 
@@ -48,6 +49,31 @@ def index(request):
 
     return render(request,'portfolios/index.html', context)
 
+
+@login_required
+def skill(request):
+    colors = Color.objects.all()
+    skills = Skill.objects.all()
+    if request.method == 'POST':
+        form = UsercontentForm(request.POST)        
+        if form.is_valid():            
+            usercontent = form.save(commit=False)
+            usercontent.user = request.user
+            usercontent.save()
+            pprint(request.POST.getlist('all_skills'))
+            for skill in request.POST.getlist('all_skills'):
+                usercontent.all_skills.add(skill)
+            usercontent.save()
+            return redirect('portfolios:about')
+    # POST가 아닌 다른 methods 일 때
+    else: 
+        form = UsercontentForm()    
+    context = {
+        'colors': colors,
+        'skills': skills,
+        'form': form,     
+    }
+    return render(request,'portfolios/skill.html', context)  
 
 @login_required
 def about(request):

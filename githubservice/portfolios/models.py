@@ -30,7 +30,7 @@ class Usercontent(models.Model):
     develop_content5 = models.CharField(max_length=20)
     develop_content6 = models.CharField(max_length=20)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) 
-    color = models.ForeignKey(Color, on_delete=models.CASCADE)
+    color = models.ForeignKey(Color, on_delete=models.CASCADE, null=True)
     all_skills = models.ManyToManyField(Skill, related_name='all_contents', null=True)
  
  
