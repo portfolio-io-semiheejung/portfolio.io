@@ -9,10 +9,17 @@ from django.views.decorators.http import require_http_methods, require_POST
 from django.contrib.auth.decorators import login_required
 from accounts.forms import CustomUserCreationForm
 from django.contrib.auth import get_user_model
+<<<<<<< HEAD
 from mains.models import Color, Post
 from .forms import UsercontentForm, GithubForm
 from .models import Usercontent, Skill, Github
 from accounts.models import User
+=======
+from mains.models import Color,Post
+from .forms import UsercontentForm, ProjectForm, EducationForm, ExperienceForm, GithubForm
+from .models import Usercontent, Skill, Project, Education, Experience, Github
+from django.shortcuts import render, redirect, get_object_or_404
+>>>>>>> heejung
 
 #for a in d[0]['ssh_url']:
 #    pprint(a)
@@ -29,7 +36,6 @@ def index(request):
     repo_url = f'https://api.github.com/users/{git_name}/repos'
     #repo_url = 'https://api.github.com/users/heejung-choi/repos' 
     repo_load = json.loads(requests.get(repo_url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).text)    
-
     repo_name = []
     repo_url = []
     for r in range(len(repo_load)):
@@ -38,15 +44,13 @@ def index(request):
         #repo_name.append(repo_load[r]['name']+": "+repo_load[r]['html_url'])
         repo_name.append(repo_load[r]['name'])
         repo_url.append(repo_load[r]['html_url'])   
-    pprint("---------------------")
-    #pprint(repo_name)
-  
+              
     context = {
         'name': response['login'],
         'profile_img_url': response['avatar_url'],
         'email': response['email'],
         'repo_name': repo_name,
-        'repo_url': repo_url,
+        'repo_url': repo_url,        
     }
 
     return render(request,'portfolios/index.html', context)
@@ -67,7 +71,11 @@ def skill(request):
             for skill in request.POST.getlist('all_skills'):
                 usercontent.all_skills.add(skill)
             usercontent.save()
+<<<<<<< HEAD
             return redirect('portfolios:about')
+=======
+            return redirect('portfolios:project',usercontent.pk)
+>>>>>>> heejung
     # POST가 아닌 다른 methods 일 때
     else: 
         form = UsercontentForm()
@@ -79,7 +87,60 @@ def skill(request):
         'skills': skills,
         'form': form,     
     }
+<<<<<<< HEAD
     return render(request,'portfolios/skill.html', context)  
+=======
+    return render(request,'portfolios/skill.html', context)
+
+def project(request,pk):
+    #content = Usercontent.objects.get(user_id=request.user.pk)    
+    usercontent = Usercontent.objects.get(pk=pk)
+    git_name = request.user.github_username   
+    url = f'https://api.github.com/users/{git_name}'
+    response = requests.get(url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).json()
+    repo_url = f'https://api.github.com/users/{git_name}/repos'    
+    repo_load = json.loads(requests.get(repo_url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).text)    
+    repo_name = []
+    for r in range(len(repo_load)):     
+        repo_name.append(repo_load[r]['name'])       
+
+    if request.method == 'POST':
+        edu_form = EducationForm(request.POST)
+        ex_form = ExperienceForm(request.POST)
+        project_form = ProjectForm(request.POST, request.FILES)
+
+        if edu_form.is_valid():
+            edu = edu_form.save(commit=False)
+            edu.usercontent = usercontent
+            edu.save()     
+            return redirect('portfolios:project',pk)
+
+        if ex_form.is_valid():
+            ex = ex_form.save(commit=False)
+            ex.usercontent = usercontent
+            ex.save()
+            return redirect('portfolios:project',pk)
+
+        if project_form.is_valid():
+            project = project_form.save(commit=False)
+            project.usercontent = usercontent
+            project.save()
+            return redirect('portfolios:project',pk)
+
+    else:
+        edu_form = EducationForm()
+        ex_form = ExperienceForm()
+        project_form = ProjectForm()
+
+    context = {
+        'edu_form' : edu_form,
+        'ex_form' : ex_form,
+        'project_form' : project_form,
+        'usercontent' : usercontent,
+        'repo_name': repo_name,
+    }
+    return render(request, 'portfolios/project.html', context)
+>>>>>>> heejung
 
 @login_required
 def about(request):
@@ -98,6 +159,7 @@ def about(request):
         
     }
     return render(request, 'portfolios/about.html', context)
+<<<<<<< HEAD
     
 @login_required
 def insert(request):
@@ -180,3 +242,6 @@ def gitinfo(request):
 #         choice.save()
 
 
+=======
+    
+>>>>>>> heejung
