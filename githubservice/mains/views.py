@@ -8,43 +8,26 @@ from portfolios.models import Usercontent
 from pprint import pprint
 from .forms import PostForm, CommentForm
 from .models import Post, Color, Comment
-# User = get_user_model()
+from portfolios.models import Github
+
 # Create your views here.
 def index(request):
     return render(request,'mains/index.html')
 
-@login_required
+
 def template(request):
+    githubs = Github.objects.all()
     posts = Post.objects.all()
-    colors = Color.objects.all()
-    skills = Skill.objects.all()
     comment_form = CommentForm()
-    comments = Comment.objects.all()    
-    if request.method == 'POST':
-        form = UsercontentForm(request.POST)
-        # print(form.is_valid())
-        # print(form.errors)
-        if form.is_valid():            
-            usercontent = form.save(commit=False)
-            usercontent.user = request.user
-            usercontent.save()
-            pprint(request.POST.getlist('all_skills'))
-            for skill in request.POST.getlist('all_skills'):
-                usercontent.all_skills.add(skill)
-            usercontent.save()
-            return redirect('portfolios:about')
-    # POST가 아닌 다른 methods 일 때
-    else: 
-        form = UsercontentForm()    
+    comments = Comment.objects.all()
     context = {
+        'githubs':githubs,
         'posts': posts,
-        'colors': colors,
-        'skills': skills,
-        'form': form,
         'comment_form': comment_form,
         'comments' : comments,
     }
-    return render(request,'mains/template.html', context)    
+    return render(request,'mains/template.html', context)
+ 
     
 # 사용자가 입력하는건 아니고, 우리 db에 넣어서 template에 뿌릴 것
 @login_required

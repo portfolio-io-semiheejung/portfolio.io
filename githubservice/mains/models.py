@@ -11,7 +11,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='media')
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_posts')
     class Meta:
-        ordering = ['-id']      
+        ordering = ['id']      
 
 
 class Color(models.Model):
