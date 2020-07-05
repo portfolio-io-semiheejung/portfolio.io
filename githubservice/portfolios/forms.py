@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usercontent, Skill
+from .models import Usercontent, Skill, Github
 
 #from .models import 
 
@@ -98,3 +98,8 @@ class UsercontentForm(forms.ModelForm):
         #fields = '__all__'
         exclude =('user',)
 
+
+class GithubForm(forms.ModelForm):
+    class Meta:
+        model = Github
+        fields = '__all__'

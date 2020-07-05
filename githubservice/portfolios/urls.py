@@ -8,4 +8,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('insert/', views.insert, name='insert'),
     path('<int:Usercontent_pk>/', views.detail, name='detail'),
+    path('gitinfo/', views.gitinfo, name='gitinfo'),
 ]

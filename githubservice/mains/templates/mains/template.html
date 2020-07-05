@@ -15,8 +15,9 @@
 }
 </style>
 {% endblock style %}
-
+<!--모달창 열기 -->
 {% block content %}
+
 <div class="title pt-5">템플릿</div>
   <div class="subtitle">원하시는 색상을 선택하세요.</div>
   <br>
@@ -31,73 +32,7 @@
 </div>
 
   <!--색 카드 끝-->  
-  <form action="" method="POST">  
-  {% csrf_token %}  
-  {{ form.job }}
-  <br>
-  {{ form.introduce }}
-  <br>
-  {{ form.develop_content1 }}
-  <br>
-  {{ form.develop_content2 }}
-  <br>
-  {{ form.develop_content3 }}
-  <br>
-  {{ form.develop_content4 }}
-  <br>
-  {{ form.develop_content5 }}
-  <br>
-  {{ form.develop_content6 }}
-  <br>
-  <h1>사용 가능한 skill을 선택하세요.</h1>
-  <h1>Application&Data</h1>
-  {{ form.all_skills }}
-
-  {% comment %} <h1>businessTools</h1>
-   {% for skill  in skills %} 
-    {% if skill.skill_kind == 'businessTools'%}
-      <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="{{ skill.pk}}" name="allskill">
-      <label class="form-check-label" >{{ skill.skill_kind}}:{{ skill.skill_name}}</label>
-      </div>
-    {% endif %}   
-  {% endfor %} 
-  <h1>DevOps</h1>
-  {% for skill  in skills %} 
-    {% if skill.skill_kind == 'DevOps'%}
-      <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="{{ skill.pk}}" name="allskill">
-      <label class="form-check-label" >{{ skill.skill_kind}}:{{ skill.skill_name}}</label>
-      </div>
-    {% endif %}    
-  {% endfor %} 
-  <h1>Utilities</h1>
-  {% for skill  in skills %}      
-    {% if skill.skill_kind == 'Utilities'%}
-    <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="{{ skill.pk}}" name="allskill">
-    <label class="form-check-label" >{{ skill.skill_kind}}:{{ skill.skill_name}}</label>
-    </div>
-    {% endif %}
-  {% endfor %}   
-  <br><br> {% endcomment %}
-
-    {% for color  in colors %}      
-    {% if skill.skill_kind == 'Utilities'%}
-    <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="{{ color.pk}}" name="allskill">
-    <label class="form-check-label" >{{ color.color1 }}</label>
-    </div>
-    {% endif %}
-  {% endfor %}   
-
-  <button class="btn btn-light" type="reset">다시 작성하기</button>
-  <button class="btn btn-primary">작성완료</button>
-  </form>
-  <br>
-
-  
-<!-- Template Detail Modal End-->
+ 
   <script>
   // 1. 누구를
   var likeButtons = document.querySelectorAll('.fa-heart')   
