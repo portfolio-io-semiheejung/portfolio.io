@@ -1,0 +1,362 @@
+[
+{
+  "model": "portfolios.skill",
+  "pk": 1,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "Mongoose",
+    "skill_img": "https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 2,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "JavaScript",
+    "skill_img": "https://img.stackshare.io/service/1209/javascript.jpeg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 3,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "jQuery",
+    "skill_img": "https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 4,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "Python",
+    "skill_img": "https://img.stackshare.io/service/993/pUBY5pVj.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 5,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "Node.js",
+    "skill_img": "https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 6,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "PHP",
+    "skill_img": "https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 7,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "React",
+    "skill_img": "https://img.stackshare.io/service/1020/OYIaJ1KK.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 8,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "nginx",
+    "skill_img": "https://img.stackshare.io/service/1052/YMxUfyWf.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 9,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "Java",
+    "skill_img": "https://img.stackshare.io/service/995/K85ZWV2F.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 10,
+  "fields": {
+    "skill_kind": "Application&Data",
+    "skill_name": "HTML5",
+    "skill_img": "https://img.stackshare.io/service/2538/kEpgHiC9.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 11,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "Slack",
+    "skill_img": "https://img.stackshare.io/service/675/RNiSRYOF_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 12,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "WordPress",
+    "skill_img": "https://img.stackshare.io/service/250/logo.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 13,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "Gmail",
+    "skill_img": "https://img.stackshare.io/service/3167/_K34MGL8_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 14,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "Font Awesome",
+    "skill_img": "https://img.stackshare.io/service/3244/1_Mr1Fy00XjPGNf1Kkp_hWtw_2x.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 15,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "Jira",
+    "skill_img": "https://img.stackshare.io/service/154/Qifq4jpS_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 16,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "Trello",
+    "skill_img": "https://img.stackshare.io/service/109/-CvHThPk_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 17,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "G Suite",
+    "skill_img": "https://img.stackshare.io/service/247/oYkAxyQM_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 18,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "Mailchimp",
+    "skill_img": "https://img.stackshare.io/service/47/69XlPqVT.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 19,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "Confluence",
+    "skill_img": "https://img.stackshare.io/service/769/5_z16TbH_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 20,
+  "fields": {
+    "skill_kind": "businessTools",
+    "skill_name": "Google AdSense",
+    "skill_img": "https://img.stackshare.io/service/5137/xvWejEyc_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 21,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "Postman",
+    "skill_img": "https://img.stackshare.io/service/1336/xWMRvm_5_400x400.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 22,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "Stack Overflow",
+    "skill_img": "https://img.stackshare.io/service/1927/so-icon.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 23,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "Google Maps",
+    "skill_img": "https://img.stackshare.io/service/1652/googlemaps.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 24,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "Elasticsearch",
+    "skill_img": "https://img.stackshare.io/service/841/Image_2019-05-20_at_4.58.04_PM.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 25,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "GitHub Pages",
+    "skill_img": "https://img.stackshare.io/service/683/sBsvBbjY.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 26,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "Amazon Route 53",
+    "skill_img": "https://img.stackshare.io/service/38/amazon-route-53.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 27,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "Shopify",
+    "skill_img": "https://img.stackshare.io/service/266/xDoyHgZW_400x400.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 28,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "WooCommerce",
+    "skill_img": "https://img.stackshare.io/service/3139/y2hg0gx5_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 29,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "TensorFlow",
+    "skill_img": "https://img.stackshare.io/service/4717/FtFnqC38_400x400.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 30,
+  "fields": {
+    "skill_kind": "Utilities",
+    "skill_name": "Magento",
+    "skill_img": "https://img.stackshare.io/service/1769/wcU6vWxh_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 31,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "DevOps Automation for SQL Server",
+    "skill_img": "https://img.stackshare.io/service/11275/devopsdata.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 32,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "Azure DevOps",
+    "skill_img": "https://img.stackshare.io/service/4313/XNKktHjN_400x400.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 33,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "Azure DevOps Server",
+    "skill_img": "https://img.stackshare.io/service/4414/BpqlqOrE_400x400.jpg"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 34,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "Toad DevOps Toolkit",
+    "skill_img": "https://img.stackshare.io/service/12194/toadDev.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 35,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "ApexSQL DevOps toolkit",
+    "skill_img": "https://img.stackshare.io/service/12193/Wqt9ju1O_400x400.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 36,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "Compliant Database DevOps",
+    "skill_img": "https://img.stackshare.io/service/12192/compliant.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 37,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "GitHub",
+    "skill_img": "https://img.stackshare.io/service/27/sBsvBbjY.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 38,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "Git",
+    "skill_img": "https://img.stackshare.io/service/1046/git.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 39,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "Docker",
+    "skill_img": "https://img.stackshare.io/service/586/n4u37v9t_400x400.png"
+  }
+},
+{
+  "model": "portfolios.skill",
+  "pk": 40,
+  "fields": {
+    "skill_kind": "DevOps",
+    "skill_name": "Visual Studio Code",
+    "skill_img": "https://img.stackshare.io/service/4202/Visual_Studio_Code_logo.png"
+  }
+}
+]

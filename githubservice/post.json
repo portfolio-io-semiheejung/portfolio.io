@@ -1,0 +1,106 @@
+[
+{
+  "model": "mains.post",
+  "pk": 1,
+  "fields": {
+    "content": "1",
+    "user": 1,
+    "created_at": "2020-07-05T20:03:44.361Z",
+    "image": "media/protfolio1.png",
+    "like_users": [
+      1
+    ]
+  }
+},
+{
+  "model": "mains.post",
+  "pk": 2,
+  "fields": {
+    "content": "2",
+    "user": 1,
+    "created_at": "2020-07-05T20:03:53.521Z",
+    "image": "media/protfolio2.png",
+    "like_users": [
+      1
+    ]
+  }
+},
+{
+  "model": "mains.post",
+  "pk": 3,
+  "fields": {
+    "content": "3",
+    "user": 1,
+    "created_at": "2020-07-05T20:04:17.077Z",
+    "image": "media/protfolio3.png",
+    "like_users": [
+      1
+    ]
+  }
+},
+{
+  "model": "mains.post",
+  "pk": 4,
+  "fields": {
+    "content": "4",
+    "user": 1,
+    "created_at": "2020-07-05T20:04:28.560Z",
+    "image": "media/protfolio4.png",
+    "like_users": [
+      1
+    ]
+  }
+},
+{
+  "model": "mains.post",
+  "pk": 5,
+  "fields": {
+    "content": "5",
+    "user": 1,
+    "created_at": "2020-07-05T20:04:37.256Z",
+    "image": "media/protfolio5..png",
+    "like_users": [
+      1
+    ]
+  }
+},
+{
+  "model": "mains.post",
+  "pk": 6,
+  "fields": {
+    "content": "6",
+    "user": 1,
+    "created_at": "2020-07-05T20:04:46.086Z",
+    "image": "media/protfolio6.png",
+    "like_users": [
+      1
+    ]
+  }
+},
+{
+  "model": "mains.post",
+  "pk": 7,
+  "fields": {
+    "content": "7",
+    "user": 1,
+    "created_at": "2020-07-05T20:04:54.200Z",
+    "image": "media/protfolio7.png",
+    "like_users": [
+      1
+    ]
+  }
+},
+{
+  "model": "mains.post",
+  "pk": 8,
+  "fields": {
+    "content": "8",
+    "user": 1,
+    "created_at": "2020-07-05T20:05:11.009Z",
+    "image": "media/protfolio8.png",
+    "like_users": [
+      1
+    ]
+  }
+}
+]
