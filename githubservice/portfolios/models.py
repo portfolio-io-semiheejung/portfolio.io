@@ -33,31 +33,32 @@ class Usercontent(models.Model):
     color = models.ForeignKey(Color, on_delete=models.CASCADE, null=True)
     all_skills = models.ManyToManyField(Skill, related_name='all_contents', null=True)
  
+class Project(models.Model):
+    project_name = models.CharField(max_length=20)
+    project_start = models.DateField()
+    project_finsh = models.DateField()
+    project_role = models.CharField(max_length=20)
+    project_skill = models.CharField(max_length=200)
+    project_content = models.TextField()
+    project_img = models.ImageField()
+    Usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE, null=True)
+    class Meta:
+        ordering = ['-project_start']    
  
-# class Education(models.Model):
-#     edu_name = models.CharField(max_length=20)
-#     edu_content = models.TextField()
-#     edu_data_start = models.DateField()
-#     edu_data_finish = models.DateField()
-#     usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE)
+class Education(models.Model):
+    edu_name = models.CharField(max_length=20)
+    edu_content = models.TextField()
+    edu_data_start = models.DateField()
+    edu_data_finish = models.DateField()
+    usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE, null=True)
+    class Meta:
+        ordering = ['-edu_data_start']
 
-# class Experience(models.Model):
-#     ex_name = models.CharField(max_length=20)
-#     ex_content = models.TextField()
-#     ex_data_start = models.DateField()
-#     ex_data_finish = models.DateField()
-#     usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE)
-#     class Meta:
-#         ordering = ['-ex_data_start']
-
-# class Project(models.Model):
-#     project_name = models.CharField(max_length=20)
-#     project_start = models.DateField()
-#     project_finsh = models.DateField()
-#     project_role = models.CharField(max_length=20)
-#     project_skill = models.CharField(max_length=200)
-#     project_content = models.TextField()
-#     project_img = models.ImageField()
-#     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
-#     class Meta:
-#         ordering = ['-project_start']     
+class Experience(models.Model):
+    ex_name = models.CharField(max_length=20)
+    ex_content = models.TextField()
+    ex_data_start = models.DateField()
+    ex_data_finish = models.DateField()
+    usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE, null=True) 
+    class Meta:
+        ordering = ['-ex_data_start']
