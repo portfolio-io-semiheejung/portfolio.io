@@ -9,10 +9,17 @@ from django.views.decorators.http import require_http_methods, require_POST
 from django.contrib.auth.decorators import login_required
 from accounts.forms import CustomUserCreationForm
 from django.contrib.auth import get_user_model
+<<<<<<< HEAD
 from mains.models import Color, Post
 from .forms import UsercontentForm, GithubForm
 from .models import Usercontent, Skill, Github
 from accounts.models import User
+=======
+from mains.models import Color
+from .forms import UsercontentForm, ProjectForm, EducationForm, ExperienceForm
+from .models import Usercontent, Skill, Project, Education, Experience
+from django.shortcuts import render, redirect, get_object_or_404
+>>>>>>> heejung
 
 #for a in d[0]['ssh_url']:
 #    pprint(a)
@@ -56,7 +63,7 @@ def index(request):
 def skill(request):
     posts = Post.objects.all()
     colors = Color.objects.all()
-    skills = Skill.objects.all()
+    skills = Skill.objects.all()    
     if request.method == 'POST':
         form = UsercontentForm(request.POST)        
         if form.is_valid():            
@@ -67,7 +74,7 @@ def skill(request):
             for skill in request.POST.getlist('all_skills'):
                 usercontent.all_skills.add(skill)
             usercontent.save()
-            return redirect('portfolios:about')
+            return redirect('portfolios:project')
     # POST가 아닌 다른 methods 일 때
     else: 
         form = UsercontentForm()
@@ -79,7 +86,27 @@ def skill(request):
         'skills': skills,
         'form': form,     
     }
-    return render(request,'portfolios/skill.html', context)  
+    return render(request,'portfolios/skill.html', context)
+
+def project(request):
+    #content = Usercontent.objects.get(user_id=request.user.pk)    
+    article = Article.objects.get(pk=pk)
+    
+    if request.method == 'POST':
+        form = EducationForm(request.POST)
+        print("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz")
+        print(form.is_valid)
+        if form.is_valid():
+            education = form.save(commit=False)
+            education.
+            return redirect('portfolios:about')
+    else: 
+        form = EducationForm()
+    context = {
+        #'content' : content,
+        'form': form,
+    }   
+    return render(request, 'portfolios/project.html', context)
 
 @login_required
 def about(request):
@@ -99,29 +126,10 @@ def about(request):
     }
     return render(request, 'portfolios/about.html', context)
     
-@login_required
-def insert(request):
-    if request.method == 'POST':
-        form = UsercontentForm(request.POST)
-        if form.is_valid():
-            Usercontent = form.save(commit=False)
-            Usercontent.user = request.user
-            Usercontent.save()
-            return redirect('portfolios:about')
-    # POST가 아닌 다른 methods 일 때
-    else: 
-        form = UsercontentForm()
-    context = {        
-        'form': form,
-    }   
-    return render(request, 'portfolios/insert.html', context)
 
 
-@login_required
-def detail(request, Usercontent_pk):
-    Usercontent = Usercontent.objects.get(pk=Usercontent.pk)
-    form = UsercontentForm()
 
+<<<<<<< HEAD
     context = {
         'Usercontent': Usercontent,
         'form' : form,
@@ -187,3 +195,5 @@ def gitinfo(request):
 #         choice.save()
 
 
+=======
+>>>>>>> heejung

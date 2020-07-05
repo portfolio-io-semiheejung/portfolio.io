@@ -1,0 +1,12 @@
+{% extends 'portfolio.html' %}
+{% load static %}
+{% block  body%}
+<h1>테스트</h1>
+<form action="">
+{% csrf_token %}
+{{ content.id }}
+{{ form.as_p }}
+<input type="hidden" value="{{ content.id }}" name="usercontent">
+<button>저장</button>
+</form>
+{% endblock  %}

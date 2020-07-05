@@ -5,8 +5,6 @@ app_name = 'portfolios'
 urlpatterns = [
     path('', views.index, name='index'),
     path('skill/', views.skill, name ='skill'),
-    path('about/', views.about, name='about'),
-    path('insert/', views.insert, name='insert'),
-    path('<int:Usercontent_pk>/', views.detail, name='detail'),
-    path('gitinfo/', views.gitinfo, name='gitinfo'),
+    path('project/', views.project, name='project'), 
+    path('about/', views.about, name='about'),    
 ]

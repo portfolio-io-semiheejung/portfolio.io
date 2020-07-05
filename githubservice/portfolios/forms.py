@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usercontent, Skill, Github
+from .models import Usercontent, Skill, Project, Education,Experience
 
 #from .models import 
 
@@ -84,7 +84,7 @@ class UsercontentForm(forms.ModelForm):
     )    
 
     all_skills = forms.ModelMultipleChoiceField(
-        queryset=Skill.objects.all(),
+        queryset=Skill.objects.all(),        
         widget=forms.CheckboxSelectMultiple()
     )
 
@@ -98,8 +98,28 @@ class UsercontentForm(forms.ModelForm):
         #fields = '__all__'
         exclude =('user',)
 
+<<<<<<< HEAD
 
 class GithubForm(forms.ModelForm):
     class Meta:
         model = Github
+=======
+class ProjectForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        #exclude =('usercontent',)
+        fields = '__all__'
+
+class EducationForm(forms.ModelForm):
+    class Meta:
+        model = Education
+        #exclude =('usercontent',)
+        fields = '__all__'
+
+
+class ExperienceForm(forms.ModelForm):
+    class Meta:
+        model = Experience
+        #exclude =('usercontent',)
+>>>>>>> heejung
         fields = '__all__'
