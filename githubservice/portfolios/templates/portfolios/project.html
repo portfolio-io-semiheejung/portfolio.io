@@ -1,12 +1,49 @@
 {% extends 'portfolio.html' %}
 {% load static %}
 {% block  body%}
-<h1>테스트</h1>
-<form action="">
+
+<button onclick=""></button>
+
+
+<h1>project 출력부분</h1>
+{% for project in usercontent.project_set.all%}
+    <p>{{ project.project_content}}</p>     
+{% endfor %}
+
+ 
+<h1>project 작성부분</h1>
+<form action="" method="POST" enctype="multipart/form-data">
 {% csrf_token %}
-{{ content.id }}
-{{ form.as_p }}
-<input type="hidden" value="{{ content.id }}" name="usercontent">
+{{ project_form.as_p }}
 <button>저장</button>
 </form>
+
+{% for name in repo_name %}
+    {{name}}
+{% endfor %}        
+
+<h1>edu 출력부분</h1>
+{% for edu in usercontent.education_set.all%}
+    <p>{{ edu.edu_content}}</p>     
+{% endfor %}
+ 
+<h1>edu 작성부분</h1>
+<form action="" method="POST">
+{% csrf_token %}
+{{ edu_form.as_p }}
+<button>저장</button>
+</form>
+
+<h1>ex 출력부분</h1>
+{% for ex in usercontent.experience_set.all%}
+    <p>{{ ex.ex_content}}</p>     
+{% endfor %}
+ 
+<h1>ex 작성부분</h1>
+<form action="" method="POST">
+{% csrf_token %}
+{{ ex_form.as_p }}
+<button>저장</button>
+</form>
+
 {% endblock  %}

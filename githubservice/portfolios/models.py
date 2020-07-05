@@ -1,18 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
+from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFill, ResizeToFit, ResizeCanvas
 from mains.models import Color
 # Create your models here.
 
 class Github(models.Model):
-    profile_img = models.CharField(max_length=200)
-    git_repourl = models.CharField(max_length=200)
-    git_reponame = models.CharField(max_length=200)
-    git_username = models.CharField(max_length=200)
-    git_email = models.CharField(max_length=200)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-
+    git_reponame = models.CharField(max_length=200,blank=True)
 
 class Skill(models.Model):
     skill_kind = models.CharField(max_length=20)  
@@ -32,7 +27,7 @@ class Usercontent(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) 
     color = models.ForeignKey(Color, on_delete=models.CASCADE, null=True)
     all_skills = models.ManyToManyField(Skill, related_name='all_contents', null=True)
- 
+
 class Project(models.Model):
     project_name = models.CharField(max_length=20)
     project_start = models.DateField()
@@ -40,8 +35,9 @@ class Project(models.Model):
     project_role = models.CharField(max_length=20)
     project_skill = models.CharField(max_length=200)
     project_content = models.TextField()
-    project_img = models.ImageField()
-    Usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE, null=True)
+    project_img = models.ImageField(upload_to='media',blank=True)
+    Usercontent = models.ForeignKey(Usercontent, on_delete=models.CASCADE, null=True)    
+    github = models.OneToOneField(Github, on_delete=models.CASCADE, null=True)
     class Meta:
         ordering = ['-project_start']    
  

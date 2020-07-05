@@ -16,8 +16,6 @@
     </div>
 </div>
 {% block container%}  
-    <form action="{% url 'portfolios:gitinfo' %} github.pk" method="POST">
-    {% csrf_token %}
     <div class="row">
     <div class="col-sm-1 colback"></div>
     <div class ="portindex col-sm-10 text-center">                
@@ -34,8 +32,7 @@
             {% if profile_img_url|length < 1 %}
                 <p>img_url이 없어요</p>
             {% else %}
-                <img class="profile_img rounded-circle" src="{{ profile_img_url }}">
-                <input name="imgurl" id="imgurl" class="btn btn-primary" type="hidden" value="{{ profile_img_url }}">
+                <img class="profile_img rounded-circle" src="{{ profile_img_url }}">                
             {% endif %}
             <br> <br>       
             <!--name 출력 부분-->      
@@ -43,40 +40,32 @@
             {% if name|length < 1 %}
                 name이 없어요
             {% else %}
-                {{ name }}
-                <input name="name" id="name" class="btn btn-primary" type="hidden" value="{{ name }}">
+                {{ name }}                
             {% endif %}
             </h5>               
             <!--email 출력 부분-->                               
             {% if email|length < 1 %}
                 <p>email이 없어요</p>
             {% else %} 
-                <p>{{email}}</p>
-                <input name="email" id="email" class="btn btn-primary" type="button" value="{{email}}">
+                <p>{{email}}</p>                
             {% endif %}
             <br>            
         </div>
         </div>                 
         <br>
-        <!--gitrepo출력부분-->
+
         {% for name in repo_name %}
-        <button class="button button2"><p>{{name}}</p></button>
-        <input name="repo_name" id="repo_name" class="btn btn-primary" type="hidden" value="{{name}}">
-        {% endfor %}
-        
-        {% comment %} {{repo_name}}
-        {{repo_url}} {% endcomment %}
-        </div>
-    <div class="col-sm-1 colback"></div>
-    </div>
-    {% endblock  %}  
+        <button class="button button2"><p>{{name}}</p></button>        
+        {% endfor %}    
+{% endblock %}
+   
     <!--페이지 이동 버튼 시작-->
     <div class="headbutton">
     <div class="a">   
     <button class="button button2" onclick="location.href='{% url 'mains:index' %}'">이전 페이지로</button>
     </div>
     <div class="b">   
-    <button class="button button2" onclick="location.href='{% url 'portfolios:skill' %}'" type ="subimt">포트폴리오 데이터 입력하기</button>
+    <button class="button button2" onclick="location.href='{% url 'portfolios:skill' %}'" type ="subimt">github 저장후, 데이터 입력하기</button>
     </div>
     </div>
     <!--페이지 이동 버튼 끝-->

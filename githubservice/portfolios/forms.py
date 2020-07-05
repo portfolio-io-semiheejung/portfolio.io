@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usercontent, Skill, Project, Education,Experience
+from .models import Usercontent, Skill, Project, Education, Experience, Github
 
 #from .models import 
 
@@ -98,28 +98,29 @@ class UsercontentForm(forms.ModelForm):
         #fields = '__all__'
         exclude =('user',)
 
-<<<<<<< HEAD
 
-class GithubForm(forms.ModelForm):
-    class Meta:
-        model = Github
-=======
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        #exclude =('usercontent',)
-        fields = '__all__'
+        exclude =('usercontent',)
 
 class EducationForm(forms.ModelForm):
     class Meta:
         model = Education
-        #exclude =('usercontent',)
-        fields = '__all__'
+        exclude =('usercontent',)
+        ##fields = '__all__'
 
 
 class ExperienceForm(forms.ModelForm):
     class Meta:
         model = Experience
-        #exclude =('usercontent',)
->>>>>>> heejung
+        exclude =('usercontent',)
+        #fields = '__all__'
+
+class GithubForm(forms.ModelForm):
+    class Meta:
+        model = Github        
         fields = '__all__'
+
+
+        

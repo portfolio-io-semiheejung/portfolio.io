@@ -8,7 +8,6 @@ from portfolios.models import Usercontent
 from pprint import pprint
 from .forms import PostForm, CommentForm
 from .models import Post, Color, Comment
-from portfolios.models import Github
 
 # Create your views here.
 def index(request):
@@ -16,12 +15,10 @@ def index(request):
 
 
 def template(request):
-    githubs = Github.objects.all()
     posts = Post.objects.all()
     comment_form = CommentForm()
     comments = Comment.objects.all()
-    context = {
-        'githubs':githubs,
+    context = {        
         'posts': posts,
         'comment_form': comment_form,
         'comments' : comments,
