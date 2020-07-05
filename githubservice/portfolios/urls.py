@@ -7,4 +7,5 @@ urlpatterns = [
     path('skill/', views.skill, name ='skill'),
     path('project/', views.project, name='project'), 
     path('about/', views.about, name='about'),    
+    path('gitinfo/', views.gitinfo, name='gitinfo'),
 ]

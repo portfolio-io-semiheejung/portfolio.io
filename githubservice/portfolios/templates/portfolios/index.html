@@ -16,7 +16,7 @@
     </div>
 </div>
 {% block container%}  
-    <form action="{% url 'portfolios:gitinfo' %} github.pk" method="POST">
+    <form action="{% url 'portfolios:gitinfo' %} " method="POST">
     {% csrf_token %}
     <div class="row">
     <div class="col-sm-1 colback"></div>
