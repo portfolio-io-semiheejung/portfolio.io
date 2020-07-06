@@ -8,6 +8,8 @@ from mains.models import Color
 
 class Github(models.Model):
     git_reponame = models.CharField(max_length=200,blank=True)
+    def __str__(self):
+        return self.git_reponame
 
 class Skill(models.Model):
     skill_kind = models.CharField(max_length=20)  
@@ -27,6 +29,8 @@ class Usercontent(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) 
     color = models.ForeignKey(Color, on_delete=models.CASCADE, null=True)
     all_skills = models.ManyToManyField(Skill, related_name='all_contents', null=True)
+    def __str__(self):
+        return self.introduce
 
 class Project(models.Model):
     project_name = models.CharField(max_length=20)

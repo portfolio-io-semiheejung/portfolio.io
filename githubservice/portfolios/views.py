@@ -79,9 +79,13 @@ def skill(request):
     return render(request,'portfolios/skill.html', context)
 
 def project(request,pk):
+    username = request.user.username
+    projects = Project.objects.all()
+    educations = Education.objects.all()
+    experiences = Experience.objects.all()
     #content = Usercontent.objects.get(user_id=request.user.pk)    
     usercontent = Usercontent.objects.get(pk=pk)
-    git_name = request.user.github_username   
+    git_name = request.user.github_username
     url = f'https://api.github.com/users/{git_name}'
     response = requests.get(url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).json()
     repo_url = f'https://api.github.com/users/{git_name}/repos'    
@@ -124,11 +128,15 @@ def project(request,pk):
         'project_form' : project_form,
         'usercontent' : usercontent,
         'repo_name': repo_name,
+        'username': username,
+        'projects': projects,
+        'educations': educations,
+        'experiences': experiences,
     }
     return render(request, 'portfolios/project.html', context)
 
-@login_required
-def about(request):
+
+def about(request, username):
     content = Usercontent.objects.get(user_id=request.user.pk)
     #pprint(content)
     color1 = '#e6dace'

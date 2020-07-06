@@ -8,48 +8,60 @@
 {% endblock  %}
 {% block  body%}
 
-<button onclick=""></button>
+<br>
+<button onclick="location.href='{% url 'portfolios:about' username %}'">입력 완료 포트폴리오 보러가기</button>
 
 
-<h1>project 출력부분</h1>
-{% for project in usercontent.project_set.all%}
-    <p>{{ project.project_content}}</p>     
-{% endfor %}
-
- 
-<h1>project 작성부분</h1>
-<form action="" method="POST" enctype="multipart/form-data">
-{% csrf_token %}
-{{ project_form.as_p }}
-<button>저장</button>
-</form>
-
-{% for name in repo_name %}
-    {{name}}
-{% endfor %}        
-
-<h1>edu 출력부분</h1>
-{% for edu in usercontent.education_set.all%}
-    <p>{{ edu.edu_content}}</p>     
+<h1>education 확인하기</h1>
+{% for education in educations %}
+{{education.edu_name}}
+{{education.edu_content}}
+{{education.edu_data_start}}
+{{education.edu_data_finish}}
 {% endfor %}
  
-<h1>edu 작성부분</h1>
+<h1>education 작성하기</h1>
 <form action="" method="POST">
 {% csrf_token %}
 {{ edu_form.as_p }}
 <button>저장</button>
 </form>
 
-<h1>ex 출력부분</h1>
-{% for ex in usercontent.experience_set.all%}
-    <p>{{ ex.ex_content}}</p>     
+<h1>experience 확인하기</h1>
+{% for experience in experiences %}
+{{experience.ex_name}}
+{{experience.ex_content}}
+{{experience.ex_data_start}}
+{{experience.ex_data_finish}}
 {% endfor %}
  
-<h1>ex 작성부분</h1>
+<h1>experience 작성부분</h1>
 <form action="" method="POST">
 {% csrf_token %}
 {{ ex_form.as_p }}
 <button>저장</button>
 </form>
+<h1>project 확인하기</h1>
+{% for project in projects %}
+{{project.project_name.as_p}}
+{{project.project_start}}
+{{project.project_finsh}}
+{{project.project_role}}
+{{project.project_skill}}
+{{project.project_content}}
+{{project.project_img }}
+<img src="/{{project.project_img }}">
+{{project.github}}
+<br>
+{% endfor %}
+
+ 
+<h1>project 작성하기</h1>
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{ project_form.as_p }}
+<button>저장</button>
+</form>     
+
 
 {% endblock  %}
