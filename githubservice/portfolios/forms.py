@@ -96,12 +96,11 @@ class UsercontentForm(forms.ModelForm):
         #fields = '__all__'
         exclude =('user',)
 
-
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
         exclude =('usercontent',)
-
+        ##fields = '__all__'
 
 class EducationForm(forms.ModelForm):
     class Meta:

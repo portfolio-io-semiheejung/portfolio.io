@@ -6,5 +6,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('skill/', views.skill, name ='skill'),
     path('<int:pk>/project/', views.project, name='project'),
-    path('about/', views.about, name='about'), 
+    path('<str:username>/about/', views.about, name='about'), 
 ]
