@@ -4,11 +4,11 @@
 <link rel="stylesheet" href="{% static 'css/portfolio_about.css'%}">
 <style>
 body {
-  color: {{color4}};
+  color: {{content.color.color4}};
 }
 
 .cardhead{
-  color: {{color4}};
+  color: {{content.color.color4}};
 }
   </style>
 {% endblock  %}
@@ -19,8 +19,8 @@ body {
 <!--20200630 header 부분 시작-->
   <nav class="navbar navbar-expand-md bg-white navbar-white navsize fixed-top">
     <a class="text-dark" href="#"><span style="font-size: 1.5em; font-weight: bold;">
-     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
-      heejung /</span> {{content.job}}</a>
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+      {{git_name}} / </span> {{content.job}}</a>
      
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -48,27 +48,26 @@ body {
 
 <!--20200630 about부분 시작-->
 <div class="main" id="about">
-<div class="mainleft" style="background-color: {{color1}};"></div>
+<div class="mainleft" style="background-color: {{content.color.color1}};"></div>
 <div class="mainright"></div>
 </div>
 <div class="maincard">
   <div class="cardleft" style="padding-top: 75px;">
-    <div class="border-0 shadow p-3 mb-5" style="background-color: {{ color2 }};">
+    <div class="border-0 shadow p-3 mb-5" style="background-color: {{content.color.color2}};">
         <br>            
         <img class="rounded-circle" src="{% static 'img/portfolio/희정.jpg' %}" width="152px" height="200px">
-        <br><br>       
-        <p class="boldword">heejung <img src="{% static 'img/portfolio/git.png' %}" onclick="location.href='https://github.com/heejung-choi'" width="40px" height="40px">
+        <br><br>
+         
+        <p class="boldword">{{git_name}}<img src="{% static 'img/portfolio/git.png' %}" onclick="location.href='https://github.com/heejung-choi'" width="40px" height="40px">
                
         <br></p>
-        <hr width="50px" size="10" align="center" color="{{ color3 }}">
+        <hr width="50px" size="10" align="center" color="{{content.color.color3}}">
         <br>
         <p class="cardword">{{content.job}}<br>
-          choi951008@naver.com
-        </p>
-        <br>
-        <p class="cardword font-weight-bold" style="color:{{ color3 }}">
-        <span style="color:{{ color4 }}">소개 :</span><br>
-        {{content.introduce}}
+          choi951008@naver.com<h1>  
+        </p>        
+        <p class="cardword font-weight-bold" style="color:{{content.color.color3}}">
+        <sapn style="color:blue; font-size:15px;">소개 :<br>{{content.introduce}}</span>
         </p>
 
                    
@@ -274,37 +273,33 @@ body {
       <img class="majorimg" src="https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg">
       <img class="majorimg" src="https://img.stackshare.io/service/993/pUBY5pVj.png">
       <img class="majorimg" src="https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png">
-      
-      
+       
   </div>    
 </div>
 
 <!--20200630 about부분 끝-->
 
 <!--20200630 edu부분 시작-->
-<div class="skill" id="skill" style="background-color: {{color1}};" >
+<div class="skill" id="skill" style="background-color: {{content.color.color1}};" >
   <div class="skiltop"></div>
   
   <div class="text-center"><h1 class="font-weight-bold skillfont" style="color:black">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
   Skill</h1></div><br>
   
   <!--20200630 card부분 시작-->
   <div class="skillcard shadow">
       <div class="card text-center d-flex justify-content-center">
-        <div class="card-header cardhead" style="background-color: {{ color2 }};">      
+        <div class="card-header cardhead" style="background-color: {{content.color.color2}};">      
         Application & Data
         </div>
           <div class="card-body">
-            <div class="card-text text-centenr skillgroup">          
-              <img class="skillimg" src="https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/1209/javascript.jpeg">
-              <img class="skillimg" src="https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/993/pUBY5pVj.png">
-              <img class="skillimg" src="https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png">
-              <img class="skillimg" src="https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/1020/OYIaJ1KK.png">
-              <img class="skillimg" src="https://img.stackshare.io/service/1052/YMxUfyWf.png">
+            <div class="card-text text-centenr skillgroup">
+            <img class="skillimg" src="https://img.stackshare.io/service/1209/javascript.jpeg">
+            <img class="skillimg" src="https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg">
+            <img class="skillimg" src="https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg">
+            <img class="skillimg" src="https://img.stackshare.io/service/993/pUBY5pVj.png">
+            <img class="skillimg" src="https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png">        
             </div>
           </div>
       </div>
@@ -316,7 +311,7 @@ body {
   <!--20200630 card부분 시작-->
   <div class="skillcard shadow">
       <div class="card text-center d-flex justify-content-center">
-        <div class="card-header cardhead" style="background-color: {{ color2 }};">      
+        <div class="card-header cardhead" style="background-color: {{content.color.color2}};">      
         Utilities
         </div>
           <div class="card-body">
@@ -331,61 +326,18 @@ body {
     </div>  
   <!--20200630 card 부분 끝-->
 
-  <br><br><br>
-
-  <!--20200630 card부분 시작-->
-  <div class="skillcard shadow">
-      <div class="card text-center d-flex justify-content-center">
-        <div class="card-header cardhead" style="background-color: {{ color2 }};">      
-        DevOps
-        </div>
-          <div class="card-body">
-            <div class="card-text text-centenr skillgroup">              
-              <img class="skillimg" src="https://img.stackshare.io/service/11275/devopsdata.png">
-              <img class="skillimg" src="https://img.stackshare.io/service/4313/XNKktHjN_400x400.png">
-              <img class="skillimg" src="https://img.stackshare.io/service/4414/BpqlqOrE_400x400.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/12194/toadDev.png">
-              <img class="skillimg" src="https://img.stackshare.io/service/27/sBsvBbjY.png">
-              <img class="skillimg" src="https://img.stackshare.io/service/1517/sbUizSli_400x400.jpg">
-            </div>
-          </div>
-      </div>
-    </div>  
-  <!--20200630 card 부분 끝-->
-
-  <br><br><br>
-
-  <!--20200630 card부분 시작-->
-  <div class="skillcard shadow">
-      <div class="card text-center d-flex justify-content-center">
-        <div class="card-header cardhead" style="background-color: {{ color2 }};">      
-        Business Tools
-        </div>
-          <div class="card-body">
-            <div class="card-text text-centenr skillgroup">              
-              <img class="skillimg" src="https://img.stackshare.io/service/675/RNiSRYOF_400x400.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/3167/_K34MGL8_400x400.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/154/Qifq4jpS_400x400.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/3176/lxVcZyci.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/5989/teams.png">
-              <img class="skillimg" src="https://img.stackshare.io/service/4167/KkVyIqPN_400x400.jpg">
-              <img class="skillimg" src="https://img.stackshare.io/service/2942/tisWILkq_400x400.png">
-            </div>
-          </div>
-      </div>
-    </div>  
-  <!--20200630 card 부분 끝-->
-  <br><br>
+  
+  <br>
 </div>
 </div>
 <!--20200630 edu부분 끝-->
 
 <!--20200701 프로젝트부분 시작-->
 
-<div class="skill" id="skill" style="background-color: {{ color1 }}; padding-bottom: 70px;">
+<div class="skill" id="skill" style="background-color: {{content.color.color1}}; padding-bottom: 70px;">
   <div class="skiltop"></div>
   <div class="text-center"><h1 class="font-weight-bold skillfont" style="color:black">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
   Projects</h1></div>
 
   <!--프로젝트 edu카드부분 시작-->
@@ -401,35 +353,35 @@ body {
           <tbody>
             <tr>
               <th scope="row" class="pt-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>
               <td class="align-middle pt-0">프로젝트명</td>
               <td class="align-middle pt-0" colspan="5">58세대를 위한 건강정보시스템 & 건강마켓</td>              
             </tr>
             <tr>
               <th scope="row" class="pt-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>
               <td class="align-middle pt-0">개발기간</td>
               <td class="align-middle pt-0" colspan="5">2020.06.09-2020.06.27</td>              
             </tr>
             <tr>
               <th scope="row" class="pt-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>        
               <td class="align-middle pt-0">팀내역할</td>
               <td class="align-middle pt-0" colspan="5">데이터분석 & 백앤드</td>  
             </tr>
             <tr>
               <th scope="row" class="pt-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>        
               <td class="align-middle pt-0" >개발스텍</td>
               <td class="align-middle pt-0" colspan="5">Spring Java R HTML</td>  
             </tr>
             <tr>
               <th scope="row" class="pt-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>        
               <td class="align-middle pt-0">프로젝트 설명</td>              
             </tr>            
@@ -458,16 +410,16 @@ body {
 
 <!--20200701 edu부분 시작-->
 
-<div class="skill" id="skill" style="background-color: {{ color1 }}; padding-bottom: 70px;">
+<div class="skill" id="skill" style="background-color: {{content.color.color1}}; padding-bottom: 70px;">
   <div class="skiltop"></div>
   <div class="text-center"><h1 class="font-weight-bold skillfont" style="color:black">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
   experience & education  </h1></div>
   <br><br>
     <!--20200630 experience card부분 시작-->
   <div class="skillcard shadow">
       <div class="card text-center d-flex justify-content-center">
-        <div class="card-header " style="background-color: {{ color2 }};">      
+        <div class="card-header " style="background-color: {{content.color.color2}};">      
        experience 
         </div>
           <table class="table table-borderless" >  
@@ -476,25 +428,32 @@ body {
           <br>
             <tr>
               <th scope="row" class="pt-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>
               <td class="align-middle pt-0">경력 회사명</td>
               <td class="align-middle pt-0" colspan="5">멀티캠퍼스</td>              
             </tr>
             <tr>
               <th scope="row" class="pt-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>
               <td class="align-middle pt-0">경력기간</td>
               <td class="align-middle pt-0" colspan="5">2019.11.29-2020.07.06</td>              
             </tr>
             <tr>
               <th scope="row" class="pt-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>        
-              <td class="align-middle pt-0">경력 내용</td>
-              <td class="align-middle pt-0" colspan="5">데이터분석 & 백앤드 강사 </td>  
+              <td class="align-middle pt-0">경력내용</td>              
             </tr>            
+            <tr>              
+              <td class="align-middle text-center pt-0 pb-0" colspan="6">
+              <div class="text-left pt-0">              
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;멀티캠퍼스에서 강사로 7개월간 일했습니다. Django, python 등의 언어를 강의했습니다.</p>
+              </div>              
+              </td>              
+            </tr>    
+                        
           </tbody>
         </table>   
           </div>
@@ -506,7 +465,7 @@ body {
      <!--20200630 educard부분 시작-->
   <div class="skillcard shadow">
       <div class="card text-center d-flex justify-content-center">
-        <div class="card-header " style="background-color: {{ color2 }};">      
+        <div class="card-header " style="background-color: {{content.color.color2}};">      
         education
         </div>
           <table class="table table-borderless" >  
@@ -515,25 +474,31 @@ body {
           <br>
             <tr>
               <th scope="row" class="pt-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>
               <td class="align-middle pt-0">교육과정명</td>
               <td class="align-middle pt-0" colspan="5">openAPI를 활용한 데이터 시각화 전처리</td>              
             </tr>
             <tr>
               <th scope="row" class="pt-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>
               <td class="align-middle pt-0">교육기간</td>
               <td class="align-middle pt-0" colspan="5">2019.11.29-2020.07.06</td>              
             </tr>
             <tr>
               <th scope="row" class="pt-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{ color3 }}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="{{content.color.color3}}" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
               </th>        
-              <td class="align-middle pt-0">교육 내용</td>
-              <td class="align-middle pt-0" colspan="5">데이터분석 & 백앤드</td>  
+              <td class="align-middle pt-0">교육내용</td>              
             </tr>            
+            <tr>              
+              <td class="align-middle text-center pt-0 pb-0" colspan="6">
+              <div class="text-left pt-0">              
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpringMVC, Java, R, HTML, CSS 등을 배웠습니다.</p>
+              </div>              
+              </td>              
+            </tr>                  
           </tbody>
         </table>   
           </div>

@@ -23,18 +23,13 @@ def index(request):
     git_name = request.user.github_username
     pprint("여기========================================")
     pprint(git_name)
-    url = f'https://api.github.com/users/{git_name}'
-    #url = 'https://api.github.com/users/heejung-choi'
+    url = f'https://api.github.com/users/{git_name}'    
     response = requests.get(url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).json()
-    repo_url = f'https://api.github.com/users/{git_name}/repos'
-    #repo_url = 'https://api.github.com/users/heejung-choi/repos' 
+    repo_url = f'https://api.github.com/users/{git_name}/repos'     
     repo_load = json.loads(requests.get(repo_url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).text)    
     repo_name = []
     repo_url = []
-    for r in range(len(repo_load)):
-        #pprint(repo_load[r]['name'])
-        #pprint(repo_load[r]['html_url'])
-        #repo_name.append(repo_load[r]['name']+": "+repo_load[r]['html_url'])
+    for r in range(len(repo_load)):        
         repo_name.append(repo_load[r]['name'])
         repo_url.append(repo_load[r]['html_url'])   
               
@@ -90,7 +85,11 @@ def project(request,pk):
     response = requests.get(url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).json()
     repo_url = f'https://api.github.com/users/{git_name}/repos'    
     repo_load = json.loads(requests.get(repo_url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).text)    
-    repo_name = []
+    repo_name = []    
+    projects = Project.objects.all()
+    educations = Education.objects.all()
+    experiences = Experience.objects.all()
+    
     for r in range(len(repo_load)):     
         repo_name.append(repo_load[r]['name'])       
 
@@ -132,12 +131,30 @@ def project(request,pk):
         'projects': projects,
         'educations': educations,
         'experiences': experiences,
-    }
+        'git_name': git_name,}
     return render(request, 'portfolios/project.html', context)
 
-
-def about(request, username):
+def about (request, username):
     content = Usercontent.objects.get(user_id=request.user.pk)
+    git_name = request.user.github_username
+    pprint("여기========================================")
+    pprint(git_name)
+    url = f'https://api.github.com/users/{git_name}'
+    response = requests.get(url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).json()
+    repo_url = f'https://api.github.com/users/{git_name}/repos'     
+    repo_load = json.loads(requests.get(repo_url, auth=HTTPBasicAuth('9cab848980beedfbdecb', 'a365a80d1e78e483f242d4a440b943509e4e4b85')).text)    
+    repo_name = []
+    repo_url = []
+    for r in range(len(repo_load)):        
+        repo_name.append(repo_load[r]['name'])
+        repo_url.append(repo_load[r]['html_url'])
+
+    projects = Project.objects.all()
+    educations = Education.objects.all()
+    experiences = Experience.objects.all()
+    colors = Color.objects.all()
+    skills = Skill.objects.all()
+
     #pprint(content)
     color1 = '#e6dace'
     color2 = 'rgb(244,236,230)'
@@ -148,7 +165,17 @@ def about(request, username):
         'color2' : color2,
         'color3' : color3,
         'color4' : color4,
-        'content': content
+        'content': content,
+        'name': response['login'],
+        'profile_img_url': response['avatar_url'],
+        'email': response['email'],
+        'repo_name': repo_name,
+        'repo_url': repo_url,
+        'projects': projects,
+        'educations': educations,
+        'experiences': experiences,
+        'colors': colors,
+        'skills': skills,
         
     }
     return render(request, 'portfolios/about.html', context)

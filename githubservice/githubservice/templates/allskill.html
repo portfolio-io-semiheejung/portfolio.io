@@ -12,19 +12,13 @@
     {% endblock  %}
 </head>
 <body>
-    {% block body %} 
-        {% block container%}
-            <div class="container">
-            </div>
-        {% endblock  %}    
+    {% block body %}        
+            <div class="container" style="padding-left: 300px; padding-right: 300px;">
+            {% block container%}
+            {% endblock  %}
+            </div>           
     {% endblock  %}
-        <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - Portfolio.io</div>
-            <div class="small text-center text-muted">저희의 github에 star<img src="https://toppng.com/uploads/preview/download-star-document-yellow-clipart-transparent-background-star-11562964878rcvhjmdsqc.png" style="width:20px"> 눌러주시면 언제든 사용가능합니다</div>
-        </div>
-    </footer>
+
     <!-- JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

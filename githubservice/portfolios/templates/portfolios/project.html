@@ -1,61 +1,118 @@
 {% extends 'portfolio.html' %}
 {% load static %}
+{% block  style%}
+<style>
+
+.button {
+  
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+.button2 {
+    background-color: rgb(28, 46, 72);
+    color: white;
+    
+  }
+  
+.button2:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(28, 46, 72);
+  }
+
+.all{
+  background-color: #f2f2f2;
+}
+  
+</style>
+{% endblock  %}
 {% block  body%}
-
+   {% include 'navbar.html' %} 
+<div class="all text-left" style="padding-left: 400px;">
 <br>
-<button onclick="location.href='{% url 'portfolios:about' username %}'">입력 완료 포트폴리오 보러가기</button>
-
-
-<h1>education 확인하기</h1>
+<br>
+<h3>education 확인하기</h3>
 {% for education in educations %}
-{{education.edu_name}}
-{{education.edu_content}}
-{{education.edu_data_start}}
-{{education.edu_data_finish}}
+<p>교육명 : {{education.edu_name}}</p>
+<p>교육내용: {{education.edu_content}}</p>
+<p>교육시작일: {{education.edu_data_start}}</p>
+<p>교육종료일:{{education.edu_data_finish}}</p>
+
 {% endfor %}
- 
-<h1>education 작성하기</h1>
+<br>
+<h3>education 작성하기</h3>
 <form action="" method="POST">
 {% csrf_token %}
 {{ edu_form.as_p }}
-<button>저장</button>
+<button class="button button2">저장</button>
 </form>
-
-<h1>experience 확인하기</h1>
+<br>
+<h3>experience 확인하기</h3>
 {% for experience in experiences %}
-{{experience.ex_name}}
-{{experience.ex_content}}
-{{experience.ex_data_start}}
-{{experience.ex_data_finish}}
+<p>
+경력사항명: {{experience.ex_name}}
+</p>
+<p>
+경력 내용: {{experience.ex_content}}
+</p>
+<p>
+경력 시작일: {{experience.ex_data_start}}
+</p>
+<p>
+경력 종료일: {{experience.ex_data_finish}}
+</p>
+
 {% endfor %}
- 
-<h1>experience 작성부분</h1>
+<br>
+<h3>experience 작성부분</h3><br>
 <form action="" method="POST">
 {% csrf_token %}
 {{ ex_form.as_p }}
-<button>저장</button>
+<button class="button button2">저장</button>
 </form>
-<h1>project 확인하기</h1>
+<br>
+<h3>project 확인하기</h3><br>
 {% for project in projects %}
-{{project.project_name.as_p}}
-{{project.project_start}}
-{{project.project_finsh}}
-{{project.project_role}}
-{{project.project_skill}}
-{{project.project_content}}
-{{project.project_img }}
-<img src="/{{project.project_img }}">
-{{project.github}}
+<p>
+프로젝트명: {{project.project_name}}
+</p>
+<p>
+프로젝트 시작일: {{project.project_start}}
+</p>
+<p>
+프로젝트 종료일: {{project.project_finsh}}
+</p>
+<p>
+프로젝트내 역할: {{project.project_role}}
+</p>
+<p>
+프로젝트 개발스텍: {{project.project_skill}}
+</p>
+<p>
+프로젝트 내용: {{project.project_content}}
+</p>
+<p>
+프로젝트 레포지토리 이름: {{project.github}}
+</p>
 <br>
 {% endfor %}
 
- 
-<h1>project 작성하기</h1>
+ <br>
+<h3>project 작성하기</h3><br>
 <form action="" method="POST" enctype="multipart/form-data">
 {% csrf_token %}
 {{ project_form.as_p }}
-<button>저장</button>
+<button class="button button2">저장</button>
 </form>     
-
+</div>
 
 {% endblock  %}
