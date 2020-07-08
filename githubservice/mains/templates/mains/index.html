@@ -4,6 +4,11 @@
 {% block style %}
 <style>
 
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+    body {
+        font-family: 'Nanum Gothic Coding', monospace;
+    } 
+
     .carousel-control-prev-icon {
         background-image: url("{% static 'mains/images/return.png' %}") !important;
     }
@@ -53,7 +58,7 @@
                 </div>
                 <br>
                 <div class="col-12">
-                    <a class="btn btn-light col-9" href="{% url 'mains:guide' %}"> 이용가이드 보기 + </a>
+                    <a class="btn btn-light col-9" href="{% url 'mains:guide' %}"> FAQ + </a>
                 </div>
             </div>
             <div class ="main-image col-8">
@@ -70,7 +75,7 @@
                     <div class="main-browser-text-area">
                         <div class="main-browser-text-1">
                             <p><b>원하는 정보를 입력만 하면 누구나 쉽게<br></b></p>
-                            <p>제작이 가능합니다.</p>
+                            <p><b style="color:#007bff; font-size:20px">포트폴리오</b>제작이 가능합니다.</p>
                         </div>
                         <div class="main-browser-text-2">
                             <p>HTML을 몰라도 디자이너가 없어도 괜찮습니다.</p>
